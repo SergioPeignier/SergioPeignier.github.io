@@ -1,3 +1,5 @@
 # CV
-[Download PDF version](../CV/cv_7.pdf)
+[Download PDF french version](CV/CV_francais.pdf)
+[Download PDF english version](CV/CV_english.pdf)
+
 

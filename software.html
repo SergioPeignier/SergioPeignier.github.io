@@ -11,47 +11,64 @@
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunctionDN() {
+      document.getElementById("dropnotes").classList.toggle("show");
+  }
+  function myFunctionDT() {
+      document.getElementById("dropteaching").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var d = 0; d < dropdowns.length; d++) {
+        var openDropdown = dropdowns[d];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
   <header>
-  <table align="center">
-  <col width=18%>
-  <col width=18%>
-  <col width=18%>
-  <col width=18%>
-  <col width=18%>
-  <col width=18%>
-  <thead>
-  <tr class="header">
-  <th><a href="./index.html">Home</a></th>
-  <th><a href="./CV.html">CV</a></th>
-  <th><a href="./research.html">Research</a></th>
-  <th><a href="./software.html">Software</a></th>
-  <th><a href="./notes.html">Notes</a></th>
-  <th><a href="./teaching.html">Teaching</a></th>
-  </tr>
-  </thead>
-  <tbody>
-  </tbody>
-  </table>
-  </header>
-  <hr>
+    <div class="menutop">
+    <ul>
+    <li><a href="./index.html">About</a></li>
+    <li><a href="./CV.html">CV</a></li>
+    <li><a href="./research.html">Research</a></li>
+    <li><a href="./software.html">Software</a></th>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
+      <div class="dropdown-content" id="dropteaching">
+        <a href="./python.html">Python</a>
+        <a href="./Databases.html">Data Bases</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Notes</a>
+      <div class="dropdown-content" id="dropnotes">
+        <a href="./evolution.html">Evolution</a>
+        <a href="./computersciences.html">Computer sciences</a>
+      </div>
+    </li>
+    </ul>
+    </div>
+    </header>
 </head>
 <body>
-<h1 id="sergio-peignier">Sergio Peignier</h1>
-<table>
-<thead>
-<tr class="header">
-<th>PhD Student at <a href="https://team.inria.fr/beagle">Project-Team BEAGLE</a></th>
-<th><img src="../home/sergiopeignier.png" title="foto" alt="alt text" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<h2 id="section"></h2>
-<h1 id="contact">Contact</h1>
-<ul>
-<li><strong>Phone:</strong> +33 6 48 79 87 46</li>
-<li><strong>Email</strong> Sergio.Peignier.Zapata AT gmail.com</li>
-</ul>
+<h1 id="software-and-side-projects">Software and side projects</h1>
+<h2 id="recent-software-developed">Recent software developed</h2>
+<h3 id="chameleoclust">Chameleoclust+</h3>
+<h3 id="nayesdog-rss-reader-with-naive-bayes-powered-recommendations">NayesDog: RSS reader with Naive Bayes powered recommendations</h3>
+<p>Have You Ever Felt Like You Were Drowning in an endless sea of data while you try to retrieve valuable information? <a href="https://github.com/MLdog/nayesdog">NayesDog</a> is a recent project developed with <a href="https://iprokin.github.io/index.html">Ilya Prokin</a> that aims to provide a smart and helpful <a href="https://en.wikipedia.org/wiki/RSS">RSS</a> reader. As for most RSS readers, users can subscribe to their favorite feeds by entering the feed’s URI and then the reader inspects and shows the chosen feeds when required. However, unlike most readers, NayesDog reads the entries and sorts them according to your preferences before showing them. Therefore users may focus on news that have been classified as more interesting for them by the algorithm. NayesDog first converts feed entries into bag of words and then uses a Naive Bayes classifier to correlate words with the user preferences. Indeed, preference buttons (like / dislike) allows users to give a feedback to the algorithm regarding their preferences. The algorithm has been designed to adapt to evolvable preferences of users.</p>
+<h3 id="adventurous-social-science">Adventurous Social Science</h3>
+<p><a href="https://github.com/AdventurousSocialScience">Adventurous Social Science</a> is a recent project we started some months ago with <a href="https://www.google.fr/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=8&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwiNtZKhxP7PAhUSahoKHV4aDOUQFgg4MAc&amp;url=https%3A%2F%2Fmx.linkedin.com%2Fin%2Fmois%25C3%25A9s-arizpe-rojo-05640b99&amp;usg=AFQjCNHw4CDnIzotIwSAADhwBiaI952-aQ&amp;sig2=_PIR36AemgjiQ2Q95cgvCw&amp;bvm=bv.136811127,d.d2s">Moises Arizpe Rojo</a>. The name of this project describe it well, we try to address social science questions but in a more adventurous and less conventional way. Our first goal is always to build an interesting question we will address. The we proceeds to collect data from social network (e.g., through Twitter API) and then we apply state-of-the-art machine learning techniques to understand better the collected observations. Finally we analyze our results and compare them to stablished theory from Social Sciences in order to give a possible answer to our initial problem (e.g. <a href="https://medium.com/adventurous-social-science">most recent posts</a>).</p>
+<h3 id="kernels-for-graph-comparisons">Kernels for graph comparisons</h3>
+<h3 id="secondary-structure-rna-prediction">Secondary structure RNA prediction</h3>
 </body>
 </html>

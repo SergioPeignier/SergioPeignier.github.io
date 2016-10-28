@@ -1,7 +1,7 @@
 # Sergio Peignier
 ##
 
-PhD Student in Computer Sciences  [BEAGLE Team-project](https://team.inria.fr/beagle), [INRIA](https://www.inria.fr) |  ![alt text](../home/sergiopeignier.png "foto")
+PhD Student in Computer Sciences  [BEAGLE Team-project](https://team.inria.fr/beagle), [INRIA](https://www.inria.fr) |  ![alt text](./home/sergiopeignier.png "foto")
 --- | ---
   
 
