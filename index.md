@@ -16,6 +16,10 @@ as evolution of evolution to conceive data mining tasks to analyse dynamic data 
 
 + **Email** Sergio.Peignier.Zapata AT gmail.com
 
++ **Linked-in** [profile](https://www.linkedin.com/in/sergiopeignier)
+
++ **Twitter** [profile](https://twitter.com/SergioPeignier)
+
 ## Address
 
 Project-Team BEAGLE
