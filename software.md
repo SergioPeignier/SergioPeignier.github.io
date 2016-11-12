@@ -18,5 +18,6 @@ As for most RSS readers, users can subscribe to their favorite feeds by entering
 ### Kernels for graph comparisons
 The development of new drugs is a expensive and slow procedure. An important step in new molecules development is the "test" phase. This particularly slow and expensive step is significantly accelerated and cheapened if Structure-Activity Relationship Analysis (SAR) is applied to the tested chemical compounds. We studied here how to predict molecular activity with graph Kernels.
 Kernels4graphs implements several kernel based methods for classification of graphs. A basic SVM algorithm and 4 different graph Kernels implementations (Nth order walk kernel, Geometric walk kernel, Markovian random walk kernel and Subtree kernel) are provided. The different approaches have been applied to Structure-Activity Relationship Analysis (SAR) to predict the molecular activity of differente chemical compounds described as labeled graphs.
+This project can be found in its github [repository](https://github.com/SergioPeignier/kernels4graphs).
 
 ### Secondary structure RNA prediction
