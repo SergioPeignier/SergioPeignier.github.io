@@ -5,7 +5,7 @@ Please find bellow some links to practical courses of python programing. Each pr
 
 + [Hopfield neural networks](./teaching/python/hopfield.pdf)
 
-+ [K-means](./teaching/python/hopfield.pdf)
++ [K-means](./teaching/python/kmeans.pdf)
 
 + [Reinforcement learning](./teaching/python/renforcement.pdf)
 
