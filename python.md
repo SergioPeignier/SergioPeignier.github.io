@@ -15,4 +15,4 @@ Please find bellow some links to practical courses of python programing. Each pr
 
 + [Simple Artificial Neural Network](./teaching/python/neuro1.pdf)
 
-+[Leaky Echo State Network](./teaching/python/leaky-echo-state.pdf)
++ [Leaky Echo State Network](./teaching/python/leaky-echo-state.pdf)
