@@ -3,7 +3,7 @@ Please find bellow some links to practical courses of python programing. Each pr
 
 + [Sequence Alignement](./teaching/python/alignement.pdf)
 
-+ [Simple Piecewise Linear Segmentation](./teaching/python/practical-simple-piecewise)
++ [Simple Piecewise Linear Segmentation](./teaching/python/practical-simple-piecewise.pdf)
 
 + [K-means](./teaching/python/kmeans.pdf)
 
