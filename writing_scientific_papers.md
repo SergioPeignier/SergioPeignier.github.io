@@ -4,6 +4,9 @@
 
 + Take notes of your work periodically.
 + A good practice that I found consists in using Jupyter notebooks; they allow to write code, exhibit figures and add markdown notes. Notice that for the sake of clarity, it is preferable not to store all the entire code inside the notebook; instead, one should import functions from external libraries.
+
+## Main steps
+
 + [1](https://orbi.uliege.be/handle/2268/24998) enumerates the major steps to prepare a scientific paper as follows:
 	+ Take notes, record results, keep a clean bibliography.  
 	+ Assess the work.
@@ -70,7 +73,7 @@ This section is mainly a summary of the advises presented in [2](https://cseweb.
 + Articulate actions with verbs: It is better saying "A inhibits B" than "There is an inhibition of A that is driven by B".
 + Avoid using more words than necessary.
 
-## Questions
+## After writing the paper
 
 Ask yourself the following questions to assess the paper
 
