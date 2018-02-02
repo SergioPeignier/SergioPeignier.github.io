@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Sergio Peignier">
+  <title>Sergio-Peignier-Home</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="./css/style.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunctionDN() {
+      document.getElementById("dropnotes").classList.toggle("show");
+  }
+  function myFunctionDT() {
+      document.getElementById("dropteaching").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var d = 0; d < dropdowns.length; d++) {
+        var openDropdown = dropdowns[d];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+  <header>
+    <div class="menutop">
+    <ul>
+    <li><a href="./index.html">About</a></li>
+    <li><a href="./CV.html">CV</a></li>
+    <li><a href="./research.html">Research</a></li>
+    <li><a href="./software.html">Software</a></th>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
+      <div class="dropdown-content" id="dropteaching">
+        <a href="./python.html">Python</a>
+        <a href="./Databases.html">Data Bases</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Notes</a>
+      <div class="dropdown-content" id="dropnotes">
+        <a href="./writing_scientific_papers.html">Some guidelines to write scientific papers</a>
+      </div>
+    </li>
+    </ul>
+    </div>
+    </header>
+</head>
+<body>
+<h1 id="notes-on-how-to-write-scientific-papers">Notes on How to write scientific papers</h1>
+<h2 id="before-writing-the-paper">Before writing the paper</h2>
+<ul>
+<li>Take notes of your work periodically.</li>
+<li>A good practice that I found consists in using Jupyter notebooks; they allow to write code, exhibit figures and add markdown notes. Notice that for the sake of clarity, it is preferable not to store all the entire code inside the notebook; instead, one should import functions from external libraries.</li>
+<li><a href="https://orbi.uliege.be/handle/2268/24998">1</a> enumerates the major steps to prepare a scientific paper as follows:
+<ul>
+<li>Take notes, record results, keep a clean bibliography.<br />
+</li>
+<li>Assess the work.</li>
+<li>Choose the journal/conference.</li>
+<li>Read the guide for authors.</li>
+<li>Define the list of authors.</li>
+<li>Ask yourself:
+<ul>
+<li>“What do we know that we did not know before?”</li>
+<li>“How did we do this?”</li>
+<li>“Why is it important and interesting?”</li>
+</ul></li>
+<li>Choose a provisory title and choose the main chapters.
+<ul>
+<li>The structure of papers may vary according to their journal. Hence, one should read papers previously published in the targeted journal, detect the most common structure, and use it to write the paper.</li>
+</ul></li>
+<li>Choose the keystone elements of the article.</li>
+<li>Ask, if necessary, the permission to use external material.</li>
+<li>Choose the tables and figures that will be presented.</li>
+<li>Write a first version of the paper.
+<ul>
+<li>The title the keywords and the abstract should be written as well as possible; Indeed these parts are the most read ones.</li>
+<li>The summary should answer the following questions:
+<ul>
+<li>Why this research has been carried out?</li>
+<li>What has been done and how?</li>
+<li>What has been found?</li>
+<li>What do these results mean?</li>
+</ul></li>
+<li>The introduction should:
+<ul>
+<li>Present the problem</li>
+<li>Present related works (short, just to depict the landscape)</li>
+<li>Justify the hypothesis.</li>
+<li>One word regarding the conclusions can be added.</li>
+</ul></li>
+<li>Material and methods:
+<ul>
+<li>Clearly explain what you did and how you did it, justifying the methods used (e.g., citation or clear description).</li>
+</ul></li>
+<li>Results:
+<ul>
+<li>Here the results are presented, not discussed nor interpreted.</li>
+<li>It is better to use figures or tables.</li>
+<li>It should be possible to understand all the results only looking at the figures and tables.</li>
+<li>Figures:
+<ul>
+<li>Legends should be explicit</li>
+<li>Pay attention to scales</li>
+<li>Add arrows and annotations to make the results as clear as possible.</li>
+</ul></li>
+</ul></li>
+<li>Discussion and Conclusions
+<ul>
+<li>Should contain all the arguments of the discussion, explain which are the benefits and limits.<br />
+</li>
+</ul></li>
+</ul></li>
+<li>Wait a couple of days.</li>
+<li>Proofread the paper.
+<ul>
+<li>Read outloud the paper.</li>
+<li>Detect sentences that you needed to read two times and rewrite them.</li>
+<li>Read sentences at random order to detect grammar and spelling errors.</li>
+</ul></li>
+<li>Prepare the list of references.</li>
+<li>Check the structure of the paper.</li>
+<li>Check the style.</li>
+<li>Ask friends and colleagues for comments.</li>
+<li>Read once more the guide for authors.</li>
+<li>Last check.</li>
+</ul></li>
+<li>Before actually writing the paper, my Ph.D. supervisor, Christophe Rigotti, suggested me to write the skeleton of the paper. The skeleton could be a simple boulet list. Using such structure, it is easier to first check the structure and then work on the style.</li>
+</ul>
+<h2 id="style">Style</h2>
+<p>This section is mainly a summary of the advises presented in <a href="https://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf">2</a>.</p>
+<ul>
+<li>Subjects should be followed by their verbs, as soon as possible.</li>
+<li>Every “unit of discourse” should have a single function, a single message.</li>
+<li>Information to be stressed should appear at the end (stress position).</li>
+<li>Long sentences should be splitted with colons to stress each important element.</li>
+<li>The object whose story it is, appears at the beginning (topic position)</li>
+<li>The new, important information should in the stress position.</li>
+<li>Pay attention to the logical gap between sentences.</li>
+<li>Articulate actions with verbs: It is better saying “A inhibits B” than “There is an inhibition of A that is driven by B”.</li>
+<li>Avoid using more words than necessary.</li>
+</ul>
+<h2 id="questions">Questions</h2>
+<p>Ask yourself the following questions to assess the paper</p>
+<ul>
+<li>Is the contribution new and original?</li>
+<li>Is the title appropriate?</li>
+<li>Do the summary and the key words describe the paper well?</li>
+<li>Are the objectives and the content of the paper aligned?</li>
+<li>Are all the part of the papers necessary?</li>
+<li>Is the presentation clear, logic and well organized?</li>
+<li>Should we reorganize, develop, condense some parts of the paper?</li>
+<li>Do we have enough details to understand materials and methods?</li>
+<li>Are all the figures and tables necessary?</li>
+<li>Are the conclusions logic, regarding the results?</li>
+<li>Is the bibliography ok?</li>
+</ul>
+</body>
+</html>
