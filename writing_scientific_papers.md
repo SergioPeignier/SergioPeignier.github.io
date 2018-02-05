@@ -36,6 +36,7 @@
 			+ One word regarding the conclusions can be added.
 		+ Material and methods:
 			+ Clearly explain what you did and how you did it, justifying the methods used (e.g., citation or clear description).
+			+ Materials and methods should be written in the past tense
 		+ Results:
 			+ Here the results are presented, not discussed nor interpreted.
 			+ It is better to use figures or tables.
