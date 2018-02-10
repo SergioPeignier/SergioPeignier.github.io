@@ -1,7 +1,7 @@
 # CV
 
-+ [Download PDF french version](CV/CV_francais.pdf)
++ [Download resume](CV/resume_english.pdf)
 
-+ [Download PDF english version](CV/CV_english.pdf)
++ [Download long CV](CV/CV_english.pdf)
 
 
