@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Sergio Peignier">
+  <title>Sergio-Peignier-Home</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="./css/style.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunctionDN() {
+      document.getElementById("dropnotes").classList.toggle("show");
+  }
+  function myFunctionDT() {
+      document.getElementById("dropteaching").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var d = 0; d < dropdowns.length; d++) {
+        var openDropdown = dropdowns[d];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+  <header>
+    <div class="menutop">
+    <ul>
+    <li><a href="./index.html">About</a></li>
+    <li><a href="./CV.html">CV</a></li>
+    <li><a href="./research.html">Research</a></li>
+    <li><a href="./software.html">Software</a></th>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
+      <div class="dropdown-content" id="dropteaching">
+        <a href="./python.html">Python</a>
+        <a href="./Databases.html">Data Bases</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Notes</a>
+      <div class="dropdown-content" id="dropnotes">
+        <a href="./writing_scientific_papers.html">Some guidelines to write scientific papers</a>
+      </div>
+    </li>
+    </ul>
+    </div>
+    </header>
+</head>
+<body>
+<h1 id="databases">Databases</h1>
+<p>Please find below some links to practical lectures in french on Databases. If you want my slides of theoretical lectures on Databases and more practical courses, please send me an e-mail.</p>
+<ul>
+<li><p><a href="./teaching/databases/TP_SQLITE.pdf">Simple Sqlite practical course</a></p></li>
+<li><p><a href="./teaching/databases/python_BD.pdf">Sqlite in python practical course</a></p></li>
+</ul>
+<p>Here you can find some links to previous exams of the Bio-Informatics department at INSA Lyon.</p>
+<ul>
+<li><p><a href="./teaching/databases/DS-BD-2015.pdf">Exam of databases 2015 Bioinformatics department INSA</a></p></li>
+<li><p><a href="./teaching/databases/DS-BD-2016.pdf">Exam of databases 2016 Bioinformatics department INSA</a></p></li>
+</ul>
+<p>Last but not least, the lectures that I used to teach Databases to the Bio-Informatics department students at INSA Lyon (French).</p>
+<ul>
+<li><p><a href="./teaching/databases/introduction.pdf">Introduction</a></p></li>
+<li><p><a href="./teaching/databases/conceptuel.pdf">Modèle Conceptuel</a></p></li>
+<li><p><a href="./teaching/databases/relationnel.pdf">Modèle Relationnel</a></p></li>
+<li><p><a href="./teaching/databases/algebre_relationnelle.pdf">Algèbre Relationnelle</a></p></li>
+<li><p><a href="./teaching/databases/normalisation.pdf">Normalisation</a></p></li>
+</ul>
+</body>
+</html>

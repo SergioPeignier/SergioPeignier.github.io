@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Sergio Peignier">
+  <title>Sergio-Peignier-Home</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="./css/style.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunctionDN() {
+      document.getElementById("dropnotes").classList.toggle("show");
+  }
+  function myFunctionDT() {
+      document.getElementById("dropteaching").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var d = 0; d < dropdowns.length; d++) {
+        var openDropdown = dropdowns[d];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+  <header>
+    <div class="menutop">
+    <ul>
+    <li><a href="./index.html">About</a></li>
+    <li><a href="./CV.html">CV</a></li>
+    <li><a href="./research.html">Research</a></li>
+    <li><a href="./software.html">Software</a></th>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
+      <div class="dropdown-content" id="dropteaching">
+        <a href="./python.html">Python</a>
+        <a href="./Databases.html">Data Bases</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Notes</a>
+      <div class="dropdown-content" id="dropnotes">
+        <a href="./writing_scientific_papers.html">Some guidelines to write scientific papers</a>
+      </div>
+    </li>
+    </ul>
+    </div>
+    </header>
+</head>
+<body>
+<h1 id="python">Python</h1>
+<p>Please find bellow some links to practical courses of python programing. Each practical course aims to let the students practice and develop their programming skills while presenting them nice algorithms. Please send me an e-mail if you want more practical courses (in french).</p>
+<ul>
+<li><p><a href="./teaching/python/alignement.pdf">Sequence Alignement</a></p></li>
+<li><p><a href="./teaching/python/practical-simple-piecewise.pdf">Simple Piecewise Linear Segmentation</a></p></li>
+<li><p><a href="./teaching/python/kmeans.pdf">K-means</a></p></li>
+<li><p><a href="./teaching/python/renforcement.pdf">Reinforcement Learning</a></p></li>
+<li><p><a href="./teaching/python/hopfield.pdf">Hopfield Neural Networks</a></p></li>
+<li><p><a href="./teaching/python/neuro1.pdf">Simple Artificial Neural Network</a></p></li>
+<li><p><a href="./teaching/python/leaky-echo-state.pdf">Leaky Echo State Network</a></p></li>
+<li><p><a href="./teaching/python/TPpandas.pdf">Pandas library</a></p></li>
+<li><p><a href="./teaching/python/c-elegans-connectome.pdf">C. Elegans Connectome</a></p></li>
+<li><p><a href="./teaching/python/DS.pdf">Exam 2016 Bioinformatics Department INSA</a></p></li>
+<li><p><a href="./teaching/python/DS2.pdf">Exam 2017 Bioinformatics Department INSA</a></p></li>
+</ul>
+</body>
+</html>

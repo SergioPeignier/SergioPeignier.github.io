@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Sergio Peignier">
+  <title>Sergio-Peignier-Home</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="./css/style.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunctionDN() {
+      document.getElementById("dropnotes").classList.toggle("show");
+  }
+  function myFunctionDT() {
+      document.getElementById("dropteaching").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var d = 0; d < dropdowns.length; d++) {
+        var openDropdown = dropdowns[d];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+  <header>
+    <div class="menutop">
+    <ul>
+    <li><a href="./index.html">About</a></li>
+    <li><a href="./CV.html">CV</a></li>
+    <li><a href="./research.html">Research</a></li>
+    <li><a href="./software.html">Software</a></th>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
+      <div class="dropdown-content" id="dropteaching">
+        <a href="./python.html">Python</a>
+        <a href="./Databases.html">Data Bases</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Notes</a>
+      <div class="dropdown-content" id="dropnotes">
+        <a href="./writing_scientific_papers.html">Some guidelines to write scientific papers</a>
+      </div>
+    </li>
+    </ul>
+    </div>
+    </header>
+</head>
+<body>
+<h1 id="sergio-peignier">Sergio Peignier</h1>
+<table>
+<thead>
+<tr class="header">
+<th>PhD Student at <a href="https://team.inria.fr/beagle">Project-Team BEAGLE</a></th>
+<th><img src="../home/sergiopeignier.png" title="foto" alt="alt text" /></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<h2 id="section"></h2>
+<h1 id="contact">Contact</h1>
+<ul>
+<li><strong>Phone:</strong> +33 6 48 79 87 46</li>
+<li><strong>Email</strong> Sergio.Peignier.Zapata AT gmail.com</li>
+</ul>
+</body>
+</html>

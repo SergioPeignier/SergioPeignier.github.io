@@ -5,9 +5,10 @@
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <meta name="author" content="Sergio Peignier">
-  <title>Sergio-Peignier-Home</title>
+  <title>SP-Teaching-Python</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./home/sergiopeignier.png" type="image/png" sizes="32x32">
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -16,7 +17,10 @@
   /* When the user clicks on the button,
   toggle between hiding and showing the dropdown content */
   function myFunctionDN() {
-      document.getElementById("dropnotes").classList.toggle("show");
+      document.getElementById("dropresearch").classList.toggle("show");
+  }
+  function myFunctionDCV() {
+      document.getElementById("dropcv").classList.toggle("show");
   }
   function myFunctionDT() {
       document.getElementById("dropteaching").classList.toggle("show");
@@ -39,22 +43,33 @@
     <div class="menutop">
     <ul>
     <li><a href="./index.html">About</a></li>
-    <li><a href="./CV.html">CV</a></li>
-    <li><a href="./research.html">Research</a></li>
-    <li><a href="./software.html">Software</a></th>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDCV()">CV</a>
+      <div class="dropdown-content" id="dropcv">
+        <a href="./CV/resume_english.pdf">Resume (english)</a>
+        <a href="./CV/CV_english.pdf">CV (english)</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Research</a>
+      <div class="dropdown-content" id="dropresearch">
+        <a href="./bio_inspired_subspace_clustering.html">Bio-Inspired Subspace Clustering</a>
+        <a href="./EvoMove.html">EvoMove: Musical Personal Companion</a>
+        <a href="./EvoWave.html">EvoWave: Wi-Fi context analysis</a>
+        <a href="./socialist_discourse.html">Socialist Discourse Analysis</a>
+        <a href="./chemoinformatics.html">Data Mining For Chemo-Informatics</a>
+      </div>
+    </li>
     <li class="dropdown">
       <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
       <div class="dropdown-content" id="dropteaching">
         <a href="./python.html">Python</a>
         <a href="./Databases.html">Data Bases</a>
+        <a href="./writing_scientific_papers.html">Scientific Writing</a>
       </div>
     </li>
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Notes</a>
-      <div class="dropdown-content" id="dropnotes">
-        <a href="./writing_scientific_papers.html">Some guidelines to write scientific papers</a>
-      </div>
-    </li>
+    <li><a href="./side_projects.html">Side Projects</a></th>
     </ul>
     </div>
     </header>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Sergio Peignier">
+  <title>SP-EvoMove</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./home/sergiopeignier.png" type="image/png" sizes="32x32">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunctionDN() {
+      document.getElementById("dropresearch").classList.toggle("show");
+  }
+  function myFunctionDCV() {
+      document.getElementById("dropcv").classList.toggle("show");
+  }
+  function myFunctionDT() {
+      document.getElementById("dropteaching").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var d = 0; d < dropdowns.length; d++) {
+        var openDropdown = dropdowns[d];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+  <header>
+    <div class="menutop">
+    <ul>
+    <li><a href="./index.html">About</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDCV()">CV</a>
+      <div class="dropdown-content" id="dropcv">
+        <a href="./CV/resume_english.pdf">Resume (english)</a>
+        <a href="./CV/CV_english.pdf">CV (english)</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Research</a>
+      <div class="dropdown-content" id="dropresearch">
+        <a href="./bio_inspired_subspace_clustering.html">Bio-Inspired Subspace Clustering</a>
+        <a href="./EvoMove.html">EvoMove: Musical Personal Companion</a>
+        <a href="./EvoWave.html">EvoWave: Wi-Fi context analysis</a>
+        <a href="./socialist_discourse.html">Socialist Discourse Analysis</a>
+        <a href="./chemoinformatics.html">Data Mining For Chemo-Informatics</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
+      <div class="dropdown-content" id="dropteaching">
+        <a href="./python.html">Python</a>
+        <a href="./Databases.html">Data Bases</a>
+        <a href="./writing_scientific_papers.html">Scientific Writing</a>
+      </div>
+    </li>
+    <li><a href="./side_projects.html">Side Projects</a></th>
+    </ul>
+    </div>
+    </header>
+</head>
+<body>
+<h1 id="live-music-performance">EvoMove: a musical personal companion for dancers</h1>
+<p>The KymeroClust algorithm was used to analyze human motion in order to perform live music. Preliminary results were presented at the International Conference on Computer Simulation of Musical Creativity (CSMC 2016) <a href="https://hal.inria.fr/hal-01368034">[Abernot et al. 2016]</a>, and a more detailed article has been published in the Journal of Creative Music Systems <a href="https://hal.archives-ouvertes.fr/hal-01596573/file/Evolving_Instrument_Commensal_Computation.pdf">[Abernot et al. 2017]</a>. This initial version aimed at combining an evolving music generation algorithm (Extramuros) with the EvoMove evolving motion-sensitive interface. The music generation algorithm generates live code that evolves during the dance performance, and the motion-sensitive algorithm also adapts its underlying clustering model continuously.
+Therefore, the system can be used as a dance-driven musical instrument that allows an immediate and evolving physical interaction with music. In practice, the system is split in two organisms: a host which generates
+music from input moves; and a symbiont which simplifies the representation of the input moves for the host.
+Both systems are organized in a commensal computation architecture, a way of organising artificially evolving system inspired by biological symbiotic relationships.</p>
+
+<center>
+  <img src="evomove/system.png" alt="evomove_schema" height="1000" width="500" align="middle">
+</center>
+
+
+<p> A recent paper describing the EvoMove system has been presented in the European Conference on Artificial Life (ECAL) <a href="https://hal.archives-ouvertes.fr/hal-01569091/document">[Peignier et al. 2017]</a>. The system relies on wireless sensors to detect dancer moves. The sensor information is sent to KymeroClust, an evolutionary algorithm that identifies and maintains a clustering model of the
+move categories. The system uses this information to play audio samples according to the detected categories. These
+categories are not predefined, but are built dynamically by clustering the stream of data coming from the motion sensors. The EvoMove system has been tested by different users and subjective promising experiences were reported.
+ Two demonstration videos produced with the dance company Anouskan have been uploaded on Youtube, as well as an informal presentation during an EvoEvo meeting. You can watch them hereafter:
+</p>
+
+<center>
+<ul>
+  
+  <p> Anouskan Experiment I </p>
+
+  <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/p_eJFiQfW1E">
+  </iframe>
+  
+  <p> Anouskan Experiment II </p>
+
+  <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/E85B1jJOiBQ">
+  </iframe>
+
+  <p> EvoEvo meeting informal demonstration </p>
+
+  <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/9dZl9x8NtYw">
+  </iframe>
+</ul>
+</center>
+</body>
+</html>

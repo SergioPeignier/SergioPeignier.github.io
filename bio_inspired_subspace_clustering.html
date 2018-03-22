@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Sergio Peignier">
+  <title>SP-Bio-Inspired</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./home/sergiopeignier.png" type="image/png" sizes="32x32">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunctionDN() {
+      document.getElementById("dropresearch").classList.toggle("show");
+  }
+  function myFunctionDCV() {
+      document.getElementById("dropcv").classList.toggle("show");
+  }
+  function myFunctionDT() {
+      document.getElementById("dropteaching").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+  
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var d = 0; d < dropdowns.length; d++) {
+        var openDropdown = dropdowns[d];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+  <header>
+    <div class="menutop">
+    <ul>
+    <li><a href="./index.html">About</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDCV()">CV</a>
+      <div class="dropdown-content" id="dropcv">
+        <a href="./CV/resume_english.pdf">Resume (english)</a>
+        <a href="./CV/CV_english.pdf">CV (english)</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Research</a>
+      <div class="dropdown-content" id="dropresearch">
+        <a href="./bio_inspired_subspace_clustering.html">Bio-Inspired Subspace Clustering</a>
+        <a href="./EvoMove.html">EvoMove: Musical Personal Companion</a>
+        <a href="./EvoWave.html">EvoWave: Wi-Fi context analysis</a>
+        <a href="./socialist_discourse.html">Socialist Discourse Analysis</a>
+        <a href="./chemoinformatics.html">Data Mining For Chemo-Informatics</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
+      <div class="dropdown-content" id="dropteaching">
+        <a href="./python.html">Python</a>
+        <a href="./Databases.html">Data Bases</a>
+        <a href="./writing_scientific_papers.html">Scientific Writing</a>
+      </div>
+    </li>
+    <li><a href="./side_projects.html">Side Projects</a></th>
+    </ul>
+    </div>
+    </header>
+</head>
+<body>
+<h1 id="bio-inspired-subspace-clustering">Bio-inspired Subspace clustering algorithms</h1>
+<p>According to <a href="https://www.ncbi.nlm.nih.gov/pubmed/16894364">Banzhaf et al. 2006</a>, bio-inspired optimization algorithms could be improved by incorporating knowledge from molecular and evolutionary biology. A promising source of advances in optimization is one of the important phenomena in evolutionary biology: the dynamic evolution of the genome structure. Several studies showed for instance that an evolvable genome structure allows evolution to modify the effects that evolution operators (e.g., mutations) have on individuals, a phenomenon known as evolution of evolution <a href="https://www.ncbi.nlm.nih.gov/pubmed/22450379">Hindré et al. 2012</a>. We aim to take advantage of evolution of evolution mechanisms to achieve data mining tasks on dynamic data sets. This has been my Ph.D. research topic, more information about this topic is available in my <a href="./phd_thesis/Thesis_Sergio_Peignier.pdf">Ph.D. manuscript</a> and my <a href="./phd_thesis/Defense_Sergio_Peignier.pdf">Ph.D. defense presentation</a>. In this webpage I give only brief information about each one of the algorithms that were developped during this project.</p>
+
+<h2 id="chameleoclust">Chameleoclust</h2>
+<p>A first major step in this project was to design and assess Chameleoclust, a subspace clustering evolutionnary algorithm. The subspace clustering task is recognized as more difficult than standard clustering since it requires to identify not only the clusters but also the various subspaces where the clusters hold. We proposed to tackle this problem with Chameleoclust, a bio-inspired algorithm that incorporates a genome with an evolvable structure to allow for evolution of evolution. The results obtained with this algorithm suggest that evolution of evolution, through an evolvable genome structure, is usefull to solve a difficult problem such as subspace clustering. The reader is refered to <a href="https://perso.liris.cnrs.fr/guillaume.beslon/evoevo/Peignier_EvoEvo.pdf">[Peignier et al. 2015]</a> or <a href="https://www.researchgate.net/publication/282288336_Subspace_Clustering_Using_Evolvable_Genome_Structure">[Peignier el al. 2015]</a> for a detailed description of Chameleoclust. This work was presented at the international ACM conference of Genetic and Evolutionary Computation Conference where it received the <a href="http://www.sigevo.org/gecco-2015/papers.html">best paper award</a> in the category Evolutionary Machine Learning.</p>
+
+<h2 id="chameleoclust+">Chameleoclust+</h3>
+<p>ChameleoClust+ is an extension of Chameleoclust. It is a bio-inspired algorithm implementing an evolvable genome structure, including several bio-like features such as a variable genome length, both functional and non-functional elements and mutation operators including chromosomal rearrangements. The main purpose of the design of ChameleoClust+ is to take advantage of the large degree of freedom provided by its evolvable structure to detect various number of clusters in subspaces of various dimensions.</p>
+<p>Chameleoclust+ runs as a python module implemented internally in C++. The software can be downloaded in the webpage of the <a href="https://projet.liris.cnrs.fr/evoevo/chameleoclust/">EvoEvo Project</a>.</p>
+
+
+<h2 id="kymeroclust">KymeroClust</h3>
+<p>KymeroClust is an algorithm based on more abstract evolutionary mechanisms, that is more efficient while still permitting to adapt the number of clusters and their subspace dimensionalities, and preserving the overall clustering quality.
+KymeroClust is based on the same phenotypic representation used in Chameleoclust: each individual has a phenotype constituted of a set of core-points, each of them being defined in its own subspace. For both algorithms a core-point can be perceived as a phenotypic trait and the coordinate of a core-point along a given dimension can be seen as a biological function that contributes to a given phenotypic trait. </p>
+
+<p>KymeroClust is organized in two different steps, an initial one called construction phase that operates during the first generations and a stationary phase that operates once the construction step has been completed until the end of the exe- cution. The organisms are initialized with an empty genome and the corresponding phenotype is simply a unique core-point located at zero along the different dimensions (barycenter of the standardized dataset).
+During the construction phase, whenever a new individual is produced by replication, one duplication-divergence operation is applied, but no deletions are performed. Consequently the genomes of the individuals are progressively built from scratch along generations by successive duplications-divergences until the genomes reach a maximal genome size that has been specified by the user as a parameter.
+Once the construction phase ends, the algorithm enters into a stationary phase and remains in this phase until the end of the execution. During this phase the gene dele- tion operator is used in addition to the gene duplication-divergence operator (the gene deletion being applied before the gene duplication-divergence operator).</p>
+
+<p>
+This algorithm has been used to cluster human motion and generate music samples in order to create the <a href="./EvoMove.html">EvoMove system</a>, a musical companion for dansers. 
+</p>
+
+
+<h2 id="submorphostream">SubMorphoStream</h3>
+<p>An important variant of the subspace clustering problem is to consider objects arriving as streaming data, where subspace clusters change along the stream. In this case, the clustering algorithm must still determine the groups of similar objects (the clusters) together with the subspaces in which these similarities hold (one subspace per cluster), but must also be able to adapt them to the dynamics of the stream. The main kinds of underlying changes in data streams are cluster drift (clusters move in space), cluster inflation/deflation (cluster sizes changing), cluster appearing/disappearing suddenly, subspace modifications (dimensions being added or removed). They require great adaptation ability, especially when several of these kinds of changes are interleaved in the same stream.
+Interestingly, living organisms inhabit ever changing environments, and consequently different mechanisms, that allow individuals to cope with adaptation to new environments, have evolved. This ability may be enhanced by the acquisition of foreign genetic material through mechanisms such as bacterial competence. Competent bacteria uptake and incorporate genetic material from their extracellular environment, such as genetic material released by organisms of different species. This mechanism may drive a fast adaptation to a new environment since the uptake of a DNA fragment containing an entire functional group of genes may lead to the acquisition of a completely new phenotypic trait in a single step. In parallel, another phenomenon, known as gene amplification, also facilitates the adaptation to new and changing environments. It consists in duplication and deletion of gene copies within tandem arrays, and through dosage- effect it works as a rudimentary form of regulation, being able to cope with inefficient genes (e.g., recently acquired genes).</p>
+
+<p>The use of evolutionary algorithms to address the subspace clustering problem for data streams seem a promising choice. However, even if different algorithms that extend the major families of subspace clustering algorithms have been developed to address this problem, none of them rely on evolutionary mechanisms.
+SubMorphoStream, is an evolutionary algorithm that combines a mechanism inspired by genetic material uptake together with gene amplification, to compute and update a subspace clustering over a dynamic data stream. SubMorphoStream belongs to the category of the axis-parallel clustering approaches, and searches for globular-shaped clusters, grouping objects around centers.</p>
+
+</body>
+</html>

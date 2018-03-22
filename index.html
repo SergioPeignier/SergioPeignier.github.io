@@ -5,9 +5,10 @@
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <meta name="author" content="Sergio Peignier">
-  <title>Sergio-Peignier-Home</title>
+  <title>Sergio-Peignier</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./home/sergiopeignier.png" type="image/png" sizes="32x32">
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -16,7 +17,10 @@
   /* When the user clicks on the button,
   toggle between hiding and showing the dropdown content */
   function myFunctionDN() {
-      document.getElementById("dropnotes").classList.toggle("show");
+      document.getElementById("dropresearch").classList.toggle("show");
+  }
+  function myFunctionDCV() {
+      document.getElementById("dropcv").classList.toggle("show");
   }
   function myFunctionDT() {
       document.getElementById("dropteaching").classList.toggle("show");
@@ -39,22 +43,33 @@
     <div class="menutop">
     <ul>
     <li><a href="./index.html">About</a></li>
-    <li><a href="./CV.html">CV</a></li>
-    <li><a href="./research.html">Research</a></li>
-    <li><a href="./software.html">Software</a></th>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDCV()">CV</a>
+      <div class="dropdown-content" id="dropcv">
+        <a href="./CV/resume_english.pdf">Resume (english)</a>
+        <a href="./CV/CV_english.pdf">CV (english)</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Research</a>
+      <div class="dropdown-content" id="dropresearch">
+        <a href="./bio_inspired_subspace_clustering.html">Bio-Inspired Subspace Clustering</a>
+        <a href="./EvoMove.html">EvoMove: Musical Personal Companion</a>
+        <a href="./EvoWave.html">EvoWave: Wi-Fi context analysis</a>
+        <a href="./socialist_discourse.html">Socialist Discourse Analysis</a>
+        <a href="./chemoinformatics.html">Data Mining For Chemo-Informatics</a>
+      </div>
+    </li>
     <li class="dropdown">
       <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
       <div class="dropdown-content" id="dropteaching">
         <a href="./python.html">Python</a>
         <a href="./Databases.html">Data Bases</a>
+        <a href="./writing_scientific_papers.html">Scientific Writing</a>
       </div>
     </li>
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Notes</a>
-      <div class="dropdown-content" id="dropnotes">
-        <a href="./writing_scientific_papers.html">Some guidelines to write scientific papers</a>
-      </div>
-    </li>
+    <li><a href="./side_projects.html">Side Projects</a></th>
     </ul>
     </div>
     </header>
@@ -65,29 +80,24 @@
 <table>
 <thead>
 <tr class="header">
-<th>PhD Student in Computer Sciences <a href="https://team.inria.fr/beagle">BEAGLE Team-project</a>, <a href="https://www.inria.fr">INRIA</a></th>
+<th>
+  <p><b>Hello</b>, I am Sergio Peignier.</p>
+  <p><b>Welcome</b> to my personal web-page!</p>
+  <p> <b>My major interests are:</b> Machine Learning, Data Mining, Bio-Inspired Algorithms, Artificial Life, Bio-Informatics, Biology, Evolution and Discourse Analysis.</p></th>
 <th><img src="./home/sergiopeignier.png" title="foto" alt="alt text" /></th>
 </tr>
 </thead>
 <tbody>
 </tbody>
 </table>
-<p>My thesis takes place within the european project <a href="http://evoevo.eu/">Evo-Evo</a> under the supervision of <a href="https://liris.cnrs.fr/membres?idn=crigotti">Christophe Rigotti</a> and <a href="https://liris.cnrs.fr/membres?idn=gbeslon">Guillaume Beslon</a> The aim of my project is to take advantage of the biological phenomenon known as evolution of evolution to conceive data mining tasks to analyse dynamic data streams.</p>
+<p> I am currently a Post-Doc in Machine Learning at <a href="http://cmla.ens-paris-saclay.fr/">CMLA ENS-Cachan</a>, and I am  working with <a href="https://sites.google.com/site/mougeotmathilde/">Mathilde Mougeot</a>, <a href="http://nvayatis.perso.math.cnrs.fr/">Nicolas Vayatis</a> and <a href="http://kalogeratos.com/psite/">Argyris Kalogeratos</a>.</p>
+
+<p>My Ph.D. took place at <a href="https://team.inria.fr/beagle">BEAGLE Team-project</a>, <a href="https://www.inria.fr">INRIA</a>, within the european project <a href="http://evoevo.eu/">Evo-Evo</a> and under the supervision of <a href="https://liris.cnrs.fr/membres?idn=crigotti">Christophe Rigotti</a> and <a href="https://liris.cnrs.fr/membres?idn=gbeslon">Guillaume Beslon</a> The aim of my project is to take advantage of the biological phenomenon known as evolution of evolution to conceive data mining tasks to analyse dynamic data streams.</p>
 <h2 id="contact">Contact</h2>
 <ul>
-<li><p><strong>Phone:</strong> +33 6 48 79 87 46</p></li>
+<li><p><strong>Phone:</strong> +33 (0)6 48 79 87 46</p></li>
 <li><p><strong>Email</strong> Sergio.Peignier.Zapata AT gmail.com</p></li>
 <li><p><strong>Linked-in</strong> <a href="https://www.linkedin.com/in/sergiopeignier">profile</a></p></li>
-<li><p><strong>Twitter</strong> <a href="https://twitter.com/SergioPeignier">profile</a></p></li>
 </ul>
-<h2 id="address">Address</h2>
-<p>Project-Team BEAGLE</p>
-<p>INRIA Rhône-Alpes</p>
-<p>Université de Lyon LIRIS UMR5205</p>
-<p>Antenne INRIA de La Doua</p>
-<p>Bâtiment CEI-2</p>
-<p>56 Boulevard Niels Bohr</p>
-<p>CS 52132</p>
-<p>69603 Villeurbanne Cedex France</p>
 </body>
 </html>
