@@ -25,6 +25,9 @@
   function myFunctionDT() {
       document.getElementById("dropteaching").classList.toggle("show");
   }
+  function myFunctionSoft() {
+      document.getElementById("dropsoftware").classList.toggle("show");
+  }
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(e) {
     if (!e.target.matches('.dropbtn')) {
@@ -67,6 +70,13 @@
         <a href="./python.html">Python</a>
         <a href="./Databases.html">Data Bases</a>
         <a href="./writing_scientific_papers.html">Scientific Writing</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionSoft()">Software</a>
+      <div class="dropdown-content" id="dropsoftware">
+        <a href="./software/EVOWAVE_PACKAGE.zip">EvoWave_Chameleoclust package</a>
+        <a href="./software/SubCMedians_JAR_Archive.zip">SubCMedians Knime package</a>
       </div>
     </li>
     <li><a href="./side_projects.html">Side Projects</a></th>

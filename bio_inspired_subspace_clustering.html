@@ -25,6 +25,9 @@
   function myFunctionDT() {
       document.getElementById("dropteaching").classList.toggle("show");
   }
+  function myFunctionSoft() {
+      document.getElementById("dropsoftware").classList.toggle("show");
+  }
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(e) {
     if (!e.target.matches('.dropbtn')) {
@@ -69,6 +72,13 @@
         <a href="./writing_scientific_papers.html">Scientific Writing</a>
       </div>
     </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionSoft()">Software</a>
+      <div class="dropdown-content" id="dropsoftware">
+        <a href="./software/EVOWAVE_PACKAGE.zip">EvoWave_Chameleoclust package</a>
+        <a href="./software/SubCMedians_JAR_Archive.zip">SubCMedians Knime package</a>
+      </div>
+    </li>
     <li><a href="./side_projects.html">Side Projects</a></th>
     </ul>
     </div>
@@ -83,7 +93,7 @@
 
 <h2 id="chameleoclust+">Chameleoclust+</h3>
 <p>ChameleoClust+ is an extension of Chameleoclust. It is a bio-inspired algorithm implementing an evolvable genome structure, including several bio-like features such as a variable genome length, both functional and non-functional elements and mutation operators including chromosomal rearrangements. The main purpose of the design of ChameleoClust+ is to take advantage of the large degree of freedom provided by its evolvable structure to detect various number of clusters in subspaces of various dimensions.</p>
-<p>Chameleoclust+ runs as a python module implemented internally in C++. The software can be downloaded in the webpage of the <a href="https://projet.liris.cnrs.fr/evoevo/chameleoclust/" target="_blank">EvoEvo Project</a>.</p>
+<p>Chameleoclust+ runs as a python module implemented internally in C++. The software can be downloaded <a href="./software/EVOWAVE_PACKAGE.zip">here</a> or in the webpage of the <a href="https://projet.liris.cnrs.fr/evoevo/chameleoclust/" target="_blank">EvoEvo Project</a>.</p>
 
 
 <h2 id="kymeroclust">KymeroClust</h3>
@@ -95,7 +105,7 @@ During the construction phase, whenever a new individual is produced by replicat
 Once the construction phase ends, the algorithm enters into a stationary phase and remains in this phase until the end of the execution. During this phase the gene dele- tion operator is used in addition to the gene duplication-divergence operator (the gene deletion being applied before the gene duplication-divergence operator).</p>
 
 <p>
-This algorithm has been used to cluster human motion and generate music samples in order to create the <a href="./EvoMove.html" target="_blank">EvoMove system</a>, a musical companion for dansers. 
+This algorithm has been used to cluster human motion and generate music samples in order to create the <a href="./EvoMove.html" target="_blank">EvoMove system</a>, a musical companion for dansers. A light Knime implementation of this algorithm can be download <a href="./software/SubCMedians_JAR_Archive.zip">here</a>.
 </p>
 
 

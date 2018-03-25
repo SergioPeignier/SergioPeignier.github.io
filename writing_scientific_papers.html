@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./home/sergiopeignier.png" type="image/png" sizes="32x32">
   <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
   function myFunctionDN() {
       document.getElementById("dropresearch").classList.toggle("show");
   }
@@ -19,8 +21,13 @@
   function myFunctionDT() {
       document.getElementById("dropteaching").classList.toggle("show");
   }
+  function myFunctionSoft() {
+      document.getElementById("dropsoftware").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
   window.onclick = function(e) {
     if (!e.target.matches('.dropbtn')) {
+  
       var dropdowns = document.getElementsByClassName("dropdown-content");
       for (var d = 0; d < dropdowns.length; d++) {
         var openDropdown = dropdowns[d];
@@ -61,10 +68,18 @@
         <a href="./writing_scientific_papers.html">Scientific Writing</a>
       </div>
     </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionSoft()">Software</a>
+      <div class="dropdown-content" id="dropsoftware">
+        <a href="./software/EVOWAVE_PACKAGE.zip">EvoWave_Chameleoclust package</a>
+        <a href="./software/SubCMedians_JAR_Archive.zip">SubCMedians Knime package</a>
+      </div>
+    </li>
     <li><a href="./side_projects.html">Side Projects</a></th>
     </ul>
     </div>
     </header>
+</head>
 </head>
 <body>
 <h1 id="notes-on-how-to-write-scientific-papers">Notes on How to write scientific papers</h1>
