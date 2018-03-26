@@ -12,17 +12,53 @@
   <script>
   /* When the user clicks on the button,
   toggle between hiding and showing the dropdown content */
-  function myFunctionDN() {
-      document.getElementById("dropresearch").classList.toggle("show");
+    function myFunctionDN() {
+    document.getElementById("dropresearch").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    }
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }
   }
   function myFunctionDCV() {
-      document.getElementById("dropcv").classList.toggle("show");
+    document.getElementById("dropcv").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }      
   }
   function myFunctionDT() {
-      document.getElementById("dropteaching").classList.toggle("show");
+    document.getElementById("dropteaching").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    }  
   }
   function myFunctionSoft() {
-      document.getElementById("dropsoftware").classList.toggle("show");
+    document.getElementById("dropsoftware").classList.toggle("show");
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    } 
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }
   }
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(e) {
