@@ -142,9 +142,14 @@ During the construction phase, whenever a new individual is produced by replicat
 Once the construction phase ends, the algorithm enters into a stationary phase and remains in this phase until the end of the execution. During this phase the gene dele- tion operator is used in addition to the gene duplication-divergence operator (the gene deletion being applied before the gene duplication-divergence operator).</p>
 
 <p>
-This algorithm has been used to cluster human motion and generate music samples in order to create the <a href="./EvoMove.html" target="_blank">EvoMove system</a>, a musical companion for dansers. A light Knime implementation of this algorithm can be download <a href="./software/SubCMedians_JAR_Archive.zip">here</a>.
+This algorithm has been used to cluster human motion and generate music samples in order to create the <a href="./EvoMove.html" target="_blank">EvoMove system</a>, a musical companion for dansers.
 </p>
 
+<p>
+KymeroClust also gave birth to a median-subspace clustering algorithm based on a weighted based strategy, called SubCMedians.
+This algorithm was presented in the <a href="https://www.sigapp.org/sac/sac2018/">33rd ACM/SIGAPP Symposium On Applied Computing</a> and won the best-paper award in the Information Systems category.
+A light Knime implementation of this algorithm can be download <a href="./software/SubCMedians_JAR_Archive.zip">here</a>, and a C++ library for Python can be downloaded <a href="./software/SubCMedians_C++_PYTHON_Archive.zip">here</a>
+<p>
 
 <h2 id="submorphostream">SubMorphoStream</h3>
 <p>An important variant of the subspace clustering problem is to consider objects arriving as streaming data, where subspace clusters change along the stream. In this case, the clustering algorithm must still determine the groups of similar objects (the clusters) together with the subspaces in which these similarities hold (one subspace per cluster), but must also be able to adapt them to the dynamics of the stream. The main kinds of underlying changes in data streams are cluster drift (clusters move in space), cluster inflation/deflation (cluster sizes changing), cluster appearing/disappearing suddenly, subspace modifications (dimensions being added or removed). They require great adaptation ability, especially when several of these kinds of changes are interleaved in the same stream.
