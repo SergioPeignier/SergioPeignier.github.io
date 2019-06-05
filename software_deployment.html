@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Sergio Peignier">
+  <title>SP-Teaching-Python</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./home/sergiopeignier.png" type="image/png" sizes="32x32">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunctionDN() {
+    document.getElementById("dropresearch").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    }
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }
+  }
+  function myFunctionDCV() {
+    document.getElementById("dropcv").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }
+  }
+  function myFunctionDT() {
+    document.getElementById("dropteaching").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    }
+  }
+  function myFunctionSoft() {
+    document.getElementById("dropsoftware").classList.toggle("show");
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    }
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var d = 0; d < dropdowns.length; d++) {
+        var openDropdown = dropdowns[d];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+  <header>
+    <div class="menutop">
+    <ul>
+    <li><a href="./index.html">About</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDCV()">CV</a>
+      <div class="dropdown-content" id="dropcv">
+        <a href="./CV/resume_english.pdf" target="_blank">Resume (english)</a>
+        <a href="./CV/CV_english.pdf" target="_blank">CV (english)</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Research</a>
+      <div class="dropdown-content" id="dropresearch">
+        <a href="./bio_inspired_subspace_clustering.html">Bio-Inspired Subspace Clustering</a>
+        <a href="./EvoMove.html">EvoMove: Musical Personal Companion</a>
+        <a href="./EvoWave.html">EvoWave: Wi-Fi context analysis</a>
+        <a href="./socialist_discourse.html">Socialist Discourse Analysis</a>
+        <a href="./chemoinformatics.html">Data Mining For Chemo-Informatics</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
+      <div class="dropdown-content" id="dropteaching">
+        <a href="./python.html">Python</a>
+        <a href="./Databases.html">Data Bases</a>
+        <a href="./writing_scientific_papers.html">Scientific Writing</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionSoft()">Software</a>
+      <div class="dropdown-content" id="dropsoftware">
+        <a href="./software/EVOWAVE_PACKAGE.zip">EvoWave_Chameleoclust package</a>
+        <a href="./software/SubCMedians_JAR_Archive.zip">SubCMedians Knime package</a>
+        <a href="./software/SubCMedians_C++_PYTHON_Archive.zip">SubCMedians Python package</a>
+      </div>
+    </li>
+    <li><a href="./side_projects.html">Side Projects</a></th>
+    </ul>
+    </div>
+    </header>
+</head>
+<body>
+<h1 id="python">Software Deployment</h1>
+<p>Please find bellow the links to the lectures slides.</p>
+<ul>
+<li><p><a href="https://www.overleaf.com/read/rptqzpqsqdyx" target="_blank">Overview and content</a></p></li>
+<li><p><a href="https://www.overleaf.com/read/kvcmpwzrpjtx" target="_blank">Reminders on Software Development</a></p></li>
+<li><p><a href="https://www.overleaf.com/read/wbssjzbtjggn" target="_blank">Introduction to Software Deployment</a></p></li>
+<li><p><a href="https://www.overleaf.com/read/ddbcjrxdxjnq" target="_blank">Package</a></p></li>
+<li><p><a href="https://www.overleaf.com/read/sybszpmjsqpt" target="_blank">Documentation in Python</a></p></li>
+<li><p><a href="https://www.overleaf.com/read/ggzcqmmrrztp" target="_blank">Deploy Python Modules</a></p></li>
+<li><p><a href="https://www.overleaf.com/read/znrhxcwnvkgk" target="_blank">Docker</a></p></li>
+</ul>
+<p>Please find bellow the link to the graph theory practical work project (python package deployment).</p>
+<ul>
+  <li><p><a href="./tutorial_python_packaging.html" target="_blank">Deploy a python package</a></p></li>
+</ul>
+</body>
+</html>
