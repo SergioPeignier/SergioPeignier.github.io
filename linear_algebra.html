@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Sergio Peignier">
+  <title>SP-Teaching-Python</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./home/sergiopeignier.png" type="image/png" sizes="32x32">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunctionDN() {
+    document.getElementById("dropresearch").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    }
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }
+  }
+  function myFunctionDCV() {
+    document.getElementById("dropcv").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }
+  }
+  function myFunctionDT() {
+    document.getElementById("dropteaching").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    }
+  }
+  function myFunctionSoft() {
+    document.getElementById("dropsoftware").classList.toggle("show");
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    }
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var d = 0; d < dropdowns.length; d++) {
+        var openDropdown = dropdowns[d];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+  <header>
+    <div class="menutop">
+    <ul>
+    <li><a href="./index.html">About</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDCV()">CV</a>
+      <div class="dropdown-content" id="dropcv">
+        <a href="./CV/resume_english.pdf" target="_blank">Resume (english)</a>
+        <a href="./CV/CV_english.pdf" target="_blank">CV (english)</a>
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Research</a>
+      <div class="dropdown-content" id="dropresearch">
+        <a href="./bio_inspired_subspace_clustering.html">Bio-Inspired Subspace Clustering</a>
+        <a href="./EvoMove.html">EvoMove: Musical Personal Companion</a>
+        <a href="./EvoWave.html">EvoWave: Wi-Fi context analysis</a>
+        <a href="./socialist_discourse.html">Socialist Discourse Analysis</a>
+        <a href="./chemoinformatics.html">Data Mining For Chemo-Informatics</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
+      <div class="dropdown-content" id="dropteaching">
+        <a href="./python.html">Python</a>
+        <a href="./Databases.html">Data Bases</a>
+        <a href="./writing_scientific_papers.html">Scientific Writing</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionSoft()">Software</a>
+      <div class="dropdown-content" id="dropsoftware">
+        <a href="./software/EVOWAVE_PACKAGE.zip">EvoWave_Chameleoclust package</a>
+        <a href="./software/SubCMedians_JAR_Archive.zip">SubCMedians Knime package</a>
+        <a href="./software/SubCMedians_C++_PYTHON_Archive.zip">SubCMedians Python package</a>
+      </div>
+    </li>
+    <li><a href="./side_projects.html">Side Projects</a></th>
+    </ul>
+    </div>
+    </header>
+</head>
+<body>
+<h1 id="python">Linear Algebra</h1>
+<p>Please find bellow the links to the lectures slides.</p>
+<ul>
+<li><p><a href="https://www.overleaf.com/read/zvzwssfnppnw" target="_blank">Vector Space</a></p></li>
+<li><p><a href="https://www.overleaf.com/read/cfbxqkjjpwyz" target="_blank">Vectors and Matrices</a></p></li>
+<li><p><a href="https://www.overleaf.com/read/sfcczkthpjwc" target="_blank">SVD</a></p></li>
+<li><p><a href="https://www.overleaf.com/read/kxpyvrkjhgxn" target="_blank">Linear Regression</a></p></li>
+<li><p><a href="https://www.overleaf.com/read/qqgwpgxjpzwb" target="_blank">QR Decomposition</a></p></li>
+</ul>
+<p>Please find bellow the links to the practical work jupyter notebooks (download and run the notebooks).</p>
+<ul>
+  <li><p><a href="./linear_algebra/ipynb/numpy_ALAM_basics.ipynb" target="_blank">Numpy (tutorial)</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/Exercise_projectors.ipynb" target="_blank">Projection Matrix (exercise)</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/Answer_projectors.ipynb" target="_blank">Projection Matrix (answer)</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/svd.ipynb" target="_blank">SVD (tutorial)</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/Vandermonde_regression.ipynb" target="_blank">Linear Regression via Vandermonde matrix inversion (tutorial)</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/pseudo_inverse_regression.ipynb" target="_blank">Linear Regression using a pseudo-inverse (tutorial)</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/svd_regression.ipynb" target="_blank">Linear Regression using SVD (tutorial)</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/QR_exo/QR_EXO.zip" target="_blank">QR decomposition exercise zip file (with dataset)</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/QR_exo/QR_answers.ipynb" target="_blank">QR decomposition answer</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/singular_value_algorithms/eigenvalue_algorithms-EXO.ipynb" target="_blank">Algorithms to compute singular values (exercises)</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/singular_value_algorithms/eigenvalue_algorithms.ipynb" target="_blank">Algorithms to compute singular values (answers)</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/Sinkhorn/Sinkhorn_algorithm.ipynb" target="_blank">Sinkhorn algorithm (tutorial)</a></p></li>
+  <li><p><a href="./linear_algebra/ipynb/PageRank.ipynb" target="_blank">Page Rank Algorithm (tutorial)</a></p></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,4 @@
+https://regularize.wordpress.com/2015/09/17/calculating-transport-plans-with-sinkhorn-knopp/
+https://www.wikiwand.com/en/Doubly_stochastic_matrix
+https://arxiv.org/pdf/1610.03871.pdf
+https://math.stackexchange.com/questions/2688328/scaling-matrix-to-achieve-specified-row-and-column-sums
