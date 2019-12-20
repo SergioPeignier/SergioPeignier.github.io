@@ -5,14 +5,14 @@
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <meta name="author" content="Sergio Peignier">
-  <title>SP-Teaching-Python</title>
+  <title>Python</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="./home/sergiopeignier.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="./home/sergiopeignier.jpeg" type="image/png" sizes="32x32">
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-  
+
   <script>
   /* When the user clicks on the button,
   toggle between hiding and showing the dropdown content */
@@ -38,7 +38,7 @@
     }
     if (document.getElementById("dropteaching").classList.contains('show')) {
       document.getElementById("dropteaching").classList.remove('show');
-    }      
+    }
   }
   function myFunctionDT() {
     document.getElementById("dropteaching").classList.toggle("show");
@@ -50,7 +50,7 @@
     }
     if (document.getElementById("dropcv").classList.contains('show')) {
       document.getElementById("dropcv").classList.remove('show');
-    }  
+    }
   }
   function myFunctionSoft() {
     document.getElementById("dropsoftware").classList.toggle("show");
@@ -59,7 +59,7 @@
     }
     if (document.getElementById("dropcv").classList.contains('show')) {
       document.getElementById("dropcv").classList.remove('show');
-    } 
+    }
     if (document.getElementById("dropteaching").classList.contains('show')) {
       document.getElementById("dropteaching").classList.remove('show');
     }
@@ -67,7 +67,7 @@
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(e) {
     if (!e.target.matches('.dropbtn')) {
-  
+
       var dropdowns = document.getElementsByClassName("dropdown-content");
       for (var d = 0; d < dropdowns.length; d++) {
         var openDropdown = dropdowns[d];
@@ -105,7 +105,11 @@
       <div class="dropdown-content" id="dropteaching">
         <a href="./python.html">Python</a>
         <a href="./Databases.html">Data Bases</a>
-        <a href="./writing_scientific_papers.html">Scientific Writing</a>
+        <a href="./software_development.html">Software Development</a>
+        <a href="./theoretical_CS.html">Graph Theory</a>
+        <a href="./stochastic_process.html">Stochastic Process</a>
+        <a href="./grn_inference.html">GRN Inference</a>
+        <a href="./linear_algebra.html">Linear Algebra</a>
       </div>
     </li>
     <li class="dropdown">
@@ -143,7 +147,7 @@
 
 <center>
 <ul>
-  
+
   <p> Raspberry Pi robot based on the "C. Elegans Connectome" practical course [robot designed and created with Carlos Vivar Ríos]</p>
 
   <iframe width="420" height="315"

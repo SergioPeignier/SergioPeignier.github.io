@@ -5,18 +5,18 @@
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <meta name="author" content="Sergio Peignier">
-  <title>SP-Chemo-Informatics</title>
+  <title>Chemoinformatics</title>
   <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="./home/sergiopeignier.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="./home/sergiopeignier.jpeg" type="image/png" sizes="32x32">
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-  
+
   <script>
   /* When the user clicks on the button,
   toggle between hiding and showing the dropdown content */
-    function myFunctionDN() {
+  function myFunctionDN() {
     document.getElementById("dropresearch").classList.toggle("show");
     if (document.getElementById("dropsoftware").classList.contains('show')) {
       document.getElementById("dropsoftware").classList.remove('show');
@@ -38,7 +38,7 @@
     }
     if (document.getElementById("dropteaching").classList.contains('show')) {
       document.getElementById("dropteaching").classList.remove('show');
-    }      
+    }
   }
   function myFunctionDT() {
     document.getElementById("dropteaching").classList.toggle("show");
@@ -50,7 +50,7 @@
     }
     if (document.getElementById("dropcv").classList.contains('show')) {
       document.getElementById("dropcv").classList.remove('show');
-    }  
+    }
   }
   function myFunctionSoft() {
     document.getElementById("dropsoftware").classList.toggle("show");
@@ -59,7 +59,7 @@
     }
     if (document.getElementById("dropcv").classList.contains('show')) {
       document.getElementById("dropcv").classList.remove('show');
-    } 
+    }
     if (document.getElementById("dropteaching").classList.contains('show')) {
       document.getElementById("dropteaching").classList.remove('show');
     }
@@ -67,7 +67,7 @@
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(e) {
     if (!e.target.matches('.dropbtn')) {
-  
+
       var dropdowns = document.getElementsByClassName("dropdown-content");
       for (var d = 0; d < dropdowns.length; d++) {
         var openDropdown = dropdowns[d];
@@ -105,7 +105,11 @@
       <div class="dropdown-content" id="dropteaching">
         <a href="./python.html">Python</a>
         <a href="./Databases.html">Data Bases</a>
-        <a href="./writing_scientific_papers.html">Scientific Writing</a>
+        <a href="./software_development.html">Software Development</a>
+        <a href="./theoretical_CS.html">Graph Theory</a>
+        <a href="./stochastic_process.html">Stochastic Process</a>
+        <a href="./grn_inference.html">GRN Inference</a>
+        <a href="./linear_algebra.html">Linear Algebra</a>
       </div>
     </li>
     <li class="dropdown">
@@ -121,10 +125,8 @@
     </div>
     </header>
 </head>
+
 <body>
-
-
-
 <h1 id="chemoinformatics">Data mining applied to chemo-informatics</h3>
 <h3 id="clustering-of-chemical-compounds">Clustering of chemical compounds</h3>
 <p>In order to assess the Chameleoclust+ algorithm we decided to use it in a more practical application. Chameleoclust was used to clusterize a set of chemical molecules described in a high dimensional space of physical and chemical descriptors. This work has been carried out in collaboration with the Theoretical Chemistry team of the Universidad Mayor de San Andres. Readers are refered to <a href="http://www.scielo.org.bo/scielo.php?script=sci_arttext&amp;pid=S0250-54602015000500002" target="_blank">Peignier and Cantañeta 2015</a> for a detailled description of this work (spanish version only).</p>
