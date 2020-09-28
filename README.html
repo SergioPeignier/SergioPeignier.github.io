@@ -12,7 +12,7 @@
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-  
+
   <script>
   /* When the user clicks on the button,
   toggle between hiding and showing the dropdown content */
@@ -28,7 +28,7 @@
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(e) {
     if (!e.target.matches('.dropbtn')) {
-  
+
       var dropdowns = document.getElementsByClassName("dropdown-content");
       for (var d = 0; d < dropdowns.length; d++) {
         var openDropdown = dropdowns[d];
@@ -64,6 +64,8 @@
       <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
       <div class="dropdown-content" id="dropteaching">
         <a href="./python.html">Python</a>
+        <a href="./string_search.html">String Search Algorithms</a>
+        <a href="./writing_scientific_papers.html">Writing Scientific Paper</a>
         <a href="./Databases.html">Data Bases</a>
         <a href="./writing_scientific_papers.html">Scientific Writing</a>
       </div>
