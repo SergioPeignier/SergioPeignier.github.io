@@ -17,13 +17,52 @@
   /* When the user clicks on the button,
   toggle between hiding and showing the dropdown content */
   function myFunctionDN() {
-      document.getElementById("dropresearch").classList.toggle("show");
+    document.getElementById("dropresearch").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    }
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }
   }
   function myFunctionDCV() {
-      document.getElementById("dropcv").classList.toggle("show");
+    document.getElementById("dropcv").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }
   }
   function myFunctionDT() {
-      document.getElementById("dropteaching").classList.toggle("show");
+    document.getElementById("dropteaching").classList.toggle("show");
+    if (document.getElementById("dropsoftware").classList.contains('show')) {
+      document.getElementById("dropsoftware").classList.remove('show');
+    }
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    }
+  }
+  function myFunctionSoft() {
+    document.getElementById("dropsoftware").classList.toggle("show");
+    if (document.getElementById("dropresearch").classList.contains('show')) {
+      document.getElementById("dropresearch").classList.remove('show');
+    }
+    if (document.getElementById("dropcv").classList.contains('show')) {
+      document.getElementById("dropcv").classList.remove('show');
+    }
+    if (document.getElementById("dropteaching").classList.contains('show')) {
+      document.getElementById("dropteaching").classList.remove('show');
+    }
   }
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(e) {
@@ -46,16 +85,18 @@
     <li class="dropdown">
       <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDCV()">CV</a>
       <div class="dropdown-content" id="dropcv">
-        <a href="./CV/resume_english.pdf">Resume (english)</a>
-        <a href="./CV/CV_english.pdf">CV (english)</a>
+        <a href="./CV/resume_english.pdf" target="_blank">Resume (english)</a>
+        <a href="./CV/CV_english.pdf" target="_blank">CV (english)</a>
       </div>
     </li>
 
     <li class="dropdown">
       <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Research</a>
       <div class="dropdown-content" id="dropresearch">
+        <a href="./Grenadine.html">GRN Inference</a>
         <a href="./bio_inspired_subspace_clustering.html">Bio-Inspired Subspace Clustering</a>
         <a href="./EvoMove.html">EvoMove: Musical Personal Companion</a>
+        <a href="./EvoWave.html">EvoWave: Wi-Fi context analysis</a>
         <a href="./socialist_discourse.html">Socialist Discourse Analysis</a>
         <a href="./chemoinformatics.html">Data Mining For Chemo-Informatics</a>
       </div>
@@ -63,11 +104,25 @@
     <li class="dropdown">
       <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
       <div class="dropdown-content" id="dropteaching">
+        <a href="./linear_algebra.html">Linear Algebra</a>
+        <a href="./stochastic_process.html">Stochastic Process</a>
+        <a href="./theoretical_CS.html">Graph Theory</a>
         <a href="./python.html">Python</a>
+        <a href="./Databases.html">Data Bases</a>
+        <a href="./software_development.html">Software Development</a>
+        <a href="./software_deployment.html">Software Deployment</a>
+        <a href="./grn_inference.html">GRN Inference</a>
         <a href="./string_search.html">String Search Algorithms</a>
         <a href="./writing_scientific_papers.html">Writing Scientific Paper</a>
-        <a href="./Databases.html">Data Bases</a>
-        <a href="./writing_scientific_papers.html">Scientific Writing</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionSoft()">Software</a>
+      <div class="dropdown-content" id="dropsoftware">
+        <a href="./software/EVOWAVE_PACKAGE.zip">EvoWave_Chameleoclust package</a>
+        <a href="./software/SubCMedians_JAR_Archive.zip">SubCMedians Knime package</a>
+        <a href="./software/SubCMedians_C++_PYTHON_Archive.zip">SubCMedians Python package</a>
+        <a href="https://gitlab.com/bf2i/grenadine">GReNaDIne Python package</a>
       </div>
     </li>
     <li><a href="./side_projects.html">Side Projects</a></th>
