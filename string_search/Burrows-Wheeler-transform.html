@@ -13082,7 +13082,7 @@ div#notebook {
 Notice that here we consider only the alphabet characters, and an "end of string" character, denoted \$ s.t. \\$ &lt; A.
 Therefore, a string $S$ that is a prefix of a string $T$ is considered smaller: $S&lt;T$.</p>
 <h3 id="Circular-Shift">Circular Shift<a class="anchor-link" href="#Circular-Shift">&#182;</a></h3><p>Let $R(T,k)=T'$ be a function that takes a string $T$ and a integer $k$ as inputs and returns a string $T'$ that is a circular shift of string $T$, such that:</p>
-<p>$T'[k:|T|] = T'[1:|T|-k]$ and $T'[1:k] = T'[|T|-k:|T|]$</p>
+<p>$T'[1,|T|-k] = T[k+1,|T|]$ and $T'[|T|-k + 1,|T|] = T[1,k]$</p>
 <p><strong>example</strong>:</p>
 <p>for T = "dans l'herbe noire Les Kobolds vont$"</p>
 <p>R(T,3) = "s l'herbe noire Les Kobolds vont$dan"</p>
@@ -13127,58 +13127,31 @@ Therefore, a string $S$ that is a prefix of a string $T$ is considered smaller: 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;dans l&#39;herbe noire les kobolds vont. le vent profond pleure, on veut croire.&quot;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">circular_shift</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Make a circular shift</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        text (str): string to be shifted</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: shifted string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">text</span><span class="p">[</span><span class="o">-</span><span class="n">k</span><span class="p">:]</span><span class="o">+</span><span class="n">text</span><span class="p">[:</span><span class="o">-</span><span class="n">k</span><span class="p">]</span>
-<span class="n">circular_shift</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[2]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#34;ut croire.dans l&#39;herbe noire les kobolds vont. le vent profond pleure, on ve&#34;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">BWT</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">BWT</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the BWT</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        text (str): string to be shifted</span>
+<span class="sd">    </span>
+<span class="sd">    Return:</span>
+<span class="sd">        str: BWT</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">text</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;$&quot;</span><span class="p">:</span>
         <span class="n">text</span> <span class="o">+=</span> <span class="s2">&quot;$&quot;</span>
     <span class="n">rotations</span> <span class="o">=</span> <span class="p">[]</span>
@@ -13200,10 +13173,24 @@ Therefore, a string $S$ that is a prefix of a string $T$ is considered smaller: 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">BWT</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;dans l&#39;herbe noire les kobolds vont. le vent profond pleure, on veut croire.&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shifted_text</span> <span class="o">=</span> <span class="n">circular_shift</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">shifted_text</span>
 </pre></div>
 
     </div>
@@ -13216,7 +13203,41 @@ Therefore, a string $S$ that is a prefix of a string $T$ is considered smaller: 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;ut croire.dans l&#39;herbe noire les kobolds vont. le vent profond pleure, on ve&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bwt</span> <span class="o">=</span> <span class="n">BWT</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="n">bwt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -13233,7 +13254,7 @@ Therefore, a string $S$ that is a prefix of a string $T$ is considered smaller: 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">BWT</span><span class="p">(</span><span class="s2">&quot;ACATACAGATG&quot;</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13271,7 +13292,7 @@ TG$ACATACAGA
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -13288,7 +13309,7 @@ TG$ACATACAGA
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">Bio</span> <span class="k">import</span> <span class="n">SeqIO</span>
@@ -13306,7 +13327,7 @@ TG$ACATACAGA
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -13323,7 +13344,7 @@ TG$ACATACAGA
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">genome</span><span class="o">.</span><span class="n">seq</span><span class="p">)[:</span><span class="mi">100</span><span class="p">]</span>
@@ -13339,7 +13360,7 @@ TG$ACATACAGA
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -13375,10 +13396,19 @@ This technique aims at storing a sequence of repeated characters as a single val
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">run_length_encoding</span><span class="p">(</span><span class="n">S</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Encode sequence using the Run Length mathod</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        text (str): string to be shifted</span>
+<span class="sd">    </span>
+<span class="sd">    Return:</span>
+<span class="sd">        str: run length</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">S</span><span class="o">+=</span><span class="s2">&quot;$&quot;</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
@@ -13404,7 +13434,40 @@ This technique aims at storing a sequence of repeated characters as a single val
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">run_length_encoding</span><span class="p">(</span><span class="s2">&quot;AAAATTCCCGCGG&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[35]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;A4T2C3GCG2&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">genome_bwt</span> <span class="o">=</span> <span class="n">BWT</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">genome</span><span class="o">.</span><span class="n">seq</span><span class="p">))</span>
@@ -13421,7 +13484,7 @@ This technique aims at storing a sequence of repeated characters as a single val
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[36]:</div>
 
 
 
@@ -13466,20 +13529,48 @@ Therefore the BWT simply returns the previous character to each suffix in the su
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">suffix_list</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the suffix list</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        T (str): string</span>
+<span class="sd">    </span>
+<span class="sd">    Return:</span>
+<span class="sd">        list of strings: suffix list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">suffix_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">:]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">))]</span>
     <span class="nb">sorted</span><span class="p">(</span><span class="n">suffix_list</span><span class="p">,</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">suffix_list</span>
 
 <span class="k">def</span> <span class="nf">suffix_table</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the suffix table</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        T (str): string</span>
+<span class="sd">    </span>
+<span class="sd">    Return:</span>
+<span class="sd">        list of tuples (suffix,location): suffix table</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">suffix_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">:]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">T</span><span class="p">))]</span>
     <span class="n">suffix_table</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">((</span><span class="n">e</span><span class="p">,</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">e</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">suffix_list</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">suffix_table</span>
 
 <span class="k">def</span> <span class="nf">BWT_suffix_table</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="n">end_of_string</span><span class="o">=</span><span class="s2">&quot;$&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute the BWT from the suffix table</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        T (str): string</span>
+<span class="sd">        end_of_string (char): end of string character to append</span>
+<span class="sd">    </span>
+<span class="sd">    Return:</span>
+<span class="sd">        bwt (str): BWT</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">T</span> <span class="o">+=</span> <span class="n">end_of_string</span>
     <span class="n">ST</span> <span class="o">=</span> <span class="n">suffix_table</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
     <span class="n">bwt</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
@@ -13495,7 +13586,7 @@ Therefore the BWT simply returns the previous character to each suffix in the su
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="s2">&quot;ACATACAGATG&quot;</span>
@@ -13512,7 +13603,7 @@ Therefore the BWT simply returns the previous character to each suffix in the su
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -13529,7 +13620,7 @@ Therefore the BWT simply returns the previous character to each suffix in the su
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">BWT_suffix_table</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
@@ -13545,7 +13636,7 @@ Therefore the BWT simply returns the previous character to each suffix in the su
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -13595,7 +13686,7 @@ The inverse BWT procedure is described hereafter:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_table</span><span class="p">(</span><span class="n">table</span><span class="p">):</span>
@@ -13603,6 +13694,17 @@ The inverse BWT procedure is described hereafter:</p>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
 
 <span class="k">def</span> <span class="nf">inverse_BWT</span><span class="p">(</span><span class="n">bwt</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">last_character</span><span class="o">=</span><span class="s2">&quot;$&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Inverse the BWT</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        bwt (str): bwt of a string T</span>
+<span class="sd">        verbose (bool): if True print the process of the algorithm</span>
+<span class="sd">        last_character (char): which is the end of string character?</span>
+<span class="sd">    </span>
+<span class="sd">    Return:</span>
+<span class="sd">        T (str): BWT^{-1} of bwt</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">paste</span><span class="p">(</span><span class="n">suffix_table</span><span class="p">,</span><span class="n">bwt</span><span class="p">):</span>
         <span class="n">new_columns</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">suffix_table</span><span class="p">):</span>
@@ -13632,7 +13734,7 @@ The inverse BWT procedure is described hereafter:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">inverse_BWT</span><span class="p">(</span><span class="s2">&quot;GT$CCGAATAAA&quot;</span><span class="p">)</span>
@@ -13648,13 +13750,79 @@ The inverse BWT procedure is described hereafter:</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[41]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>&#39;ACATACAGATG$&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[42]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;dans l&#39;herbe noire les kobolds vont. le vent profond pleure, on veut croire.&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">inverse_BWT</span><span class="p">(</span><span class="n">BWT</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[43]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;dans l&#39;herbe noire les kobolds vont. le vent profond pleure, on veut croire.$&#34;</pre>
 </div>
 
 </div>
@@ -13790,7 +13958,7 @@ Let $K$ represent the list of indexes, such that $K[i]$ is the index of $S_{bwt}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span> 
@@ -13809,6 +13977,16 @@ Let $K$ represent the list of indexes, such that $K[i]$ is the index of $S_{bwt}
     <span class="k">return</span> <span class="n">k</span> <span class="o">+</span> <span class="nb">sum</span><span class="p">([</span><span class="n">counts</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">counts</span> <span class="k">if</span> <span class="n">char</span> <span class="o">&lt;</span> <span class="n">X</span><span class="p">])</span>
     
 <span class="k">def</span> <span class="nf">efficient_inverse_BWT</span><span class="p">(</span><span class="n">bwt</span><span class="p">,</span><span class="n">end_of_string</span><span class="o">=</span><span class="s2">&quot;$&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Inverse the BWT</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        bwt (str): bwt of a string T</span>
+<span class="sd">        last_character (char): which is the end of string character?</span>
+<span class="sd">    </span>
+<span class="sd">    Return:</span>
+<span class="sd">        T (str): BWT^{-1} of bwt</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
     <span class="n">K</span> <span class="o">=</span> <span class="n">occurrence_indexer</span><span class="p">(</span><span class="n">bwt</span><span class="p">)</span>
     <span class="n">counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">bwt</span><span class="p">)</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">bwt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -13831,7 +14009,7 @@ Let $K$ represent the list of indexes, such that $K[i]$ is the index of $S_{bwt}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">inverse_BWT</span><span class="p">(</span><span class="s2">&quot;GT$CCGAATAAA&quot;</span><span class="p">)</span>
@@ -13847,7 +14025,7 @@ Let $K$ represent the list of indexes, such that $K[i]$ is the index of $S_{bwt}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -13864,7 +14042,7 @@ Let $K$ represent the list of indexes, such that $K[i]$ is the index of $S_{bwt}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">efficient_inverse_BWT</span><span class="p">(</span><span class="s2">&quot;GT$CCGAATAAA&quot;</span><span class="p">)</span>
@@ -13880,7 +14058,7 @@ Let $K$ represent the list of indexes, such that $K[i]$ is the index of $S_{bwt}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -13928,7 +14106,7 @@ Let $K$ represent the list of indexes, such that $K[i]$ is the index of $S_{bwt}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">last2first</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
@@ -13940,6 +14118,16 @@ Let $K$ represent the list of indexes, such that $K[i]$ is the index of $S_{bwt}
             <span class="k">return</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
         
 <span class="k">def</span> <span class="nf">pattern_matching_BWT</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">pattern</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Search a patter in a String using the BWT</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        S (str): string</span>
+<span class="sd">        pattern (str): pattern</span>
+<span class="sd">    </span>
+<span class="sd">    Return:</span>
+<span class="sd">        bool: true if the pattern is in the string    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">L</span> <span class="o">=</span> <span class="n">BWT_suffix_table</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
     <span class="n">K</span> <span class="o">=</span> <span class="n">occurrence_indexer</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
     <span class="n">counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
@@ -13976,7 +14164,7 @@ Let $K$ represent the list of indexes, such that $K[i]$ is the index of $S_{bwt}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pattern_matching_BWT</span><span class="p">(</span><span class="s1">&#39;ACATACAGATG&#39;</span><span class="p">,</span><span class="s1">&#39;CATAC&#39;</span><span class="p">)</span>
@@ -13992,7 +14180,7 @@ Let $K$ represent the list of indexes, such that $K[i]$ is the index of $S_{bwt}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 
