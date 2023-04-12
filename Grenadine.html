@@ -123,6 +123,7 @@
         <a href="./software/SubCMedians_JAR_Archive.zip">SubCMedians Knime package</a>
         <a href="./software/SubCMedians_C++_PYTHON_Archive.zip">SubCMedians Python package</a>
         <a href="https://gitlab.com/bf2i/grenadine">GReNaDIne Python package</a>
+        <a href="https://gitlab.com/bf2i/gxn">GXN Python package</a>
       </div>
     </li>
     <li><a href="./side_projects.html">Side Projects</a></th>
@@ -131,10 +132,22 @@
     </header>
 </head>
 <body>
-<h1 id="grenadine">GReNaDIne: Gene Regulatory Network Data-driven Inference</h1>
-<p><a href="https://hal.archives-ouvertes.fr/hal-02863880/document" target="_blank">GReNaDIne (preprint) </a>
- is a Python package that implements 18 Machine Learning data-driven gene regulatory network inference methods. It includes 8 generalist preprocessing techniques, suitable for RNAseq and MicroArray datasets analysis, as well as 4 RNAseq normalization
-techniques. This package has been successfully assessed under the DREAM5 challenge benchmark dataset.
+<h1 id="gxn">Data-Driven Gene Regulatory Network Inference</h1>
+
+<h2 id="gxn">GXN: Generalizable Gene Self-Expressive Networks</h2>
+<p><a href="https://www.mdpi.com/2218-273X/13/3/526" target="_blank">GXN paper </a>
+Self-expressiveness is a mathematical property that aims at characterizing the relationship between instances in a dataset. This property has been applied widely and successfully in computer-vision tasks, time-series analysis, and to infer underlying network structures in domains including protein signaling interactions and social-networks activity. Nevertheless, despite its potential, self-expressiveness has not been explicitly used to infer gene networks. In this article, we present Generalizable Gene Self-Expressive Networks, a new, interpretable, and generalization-aware formalism to model gene networks, and we propose two methods: GXN•EN and GXN•OMP, based respectively on ElasticNet and OMP
+(Orthogonal Matching Pursuit), to infer and assess Generalizable Gene Self-Expressive Networks. We evaluate these methods on four Microarray datasets from the DREAM5 benchmark, using both internal and external metrics. The results obtained by both methods are comparable to those obtained by state-of-the-art tools, but are fast to train and exhibit high levels of sparsity, which make them easier to interpret. Moreover we applied these methods to three complex datasets containing RNA-seq informations from different mammalian tissues/cell-types. Lastly, we applied our methodology to compare a normal vs. a disease condition (Alzheimer), which allowed us to detect differential expression of genes’ sub-networks between these two biological conditions. Globally, the gene networks obtained exhibit a sparse and modular structure, with inner communities of genes presenting statistically significant over/under-expression on specific cell types, as well as significant enrichment for some anatomical GO terms, suggesting that such communities may also drive important functional roles
+
+
+<h2 id="grenadine">GReNaDIne: Gene Regulatory Network Data-driven Inference</h2>
+<p><a href="https://www.mdpi.com/2073-4425/14/2/269" target="_blank">GReNaDIne paper </a>
+ Context: Inferring gene regulatory networks (GRN) from high-throughput gene expression data is a challenging task for which different strategies have been developed. Nevertheless, no ever-winning method exists, and each method has its advantages, intrinsic biases, and application domains. Thus, in order to analyze a dataset, users should be able to test different techniques and choose the most appropriate one. This step can be particularly difficult and time consuming, since most methods’ implementations are made available independently, possibly in different programming languages. The implementation of an open-source library containing different inference methods within a common framework is expected to be a valuable toolkit for the systems biology community. Results: In this work, we introduce GReNaDIne (Gene Regulatory Network Data-driven Inference), a Python package that implements 18 machine learning data-driven gene regulatory network inference methods. It also includes eight generalist preprocessing techniques, suitable for both RNA-seq and microarray dataset analysis, as well as four normalization techniques dedicated to RNA-seq. In addition, this package implements the possibility to combine the results of different inference tools to form robust and efficient ensembles. This package has been successfully assessed under the DREAM5 challenge benchmark dataset. The open-source GReNaDIne Python package is made freely available in a dedicated GitLab repository, as well as in the official third-party software repository PyPI Python Package Index. The latest documentation on the GReNaDIne library is also available at Read the Docs, an open-source software documentation hosting platform. Contribution: The GReNaDIne tool represents a technological contribution to the field of systems biology. This package can be used to infer gene regulatory networks from high-throughput gene expression data using different algorithms within the same framework. In order to analyze their datasets, users can apply a battery of preprocessing and postprocessing tools and choose the most adapted inference method from the GReNaDIne library and even combine the output of different methods to obtain more robust results. The results format provided by GReNaDIne is compatible with well-known complementary refinement tools such as PYSCENIC.
+</p>
+
+<p>
+  <a href="https://hal-lirmm.ccsd.cnrs.fr/BF2I/hal-03022606v2" target="_blank">ICTAI 2020 paper </a>| Gene Regulatory Network Inference Using Ensembles of Predictors
+  In the machine learning field, the technique known as ensemble learning aims at combining different base learners in order to increase the quality and the robustness of the predictions. Indeed, this approach has widely been applied to tackle, with success, real world problems from different domains, including computational biology. Nevertheless, despite the potential of this technique, ensembles that combine results from different kinds of algorithms, have been understudied in the context of gene regulatory network inference. In this paper we used a genetic algorithm and frequent itemset mining, to study and design effective ensembles, to reverse-engineer gene regulatory networks, from high-throughput data. The methods proposed here, were evaluated and compared to well-established single and ensemble methods, on real and synthetic datasets. Results demonstrate the efficiency and the robustness of these new methods, advocating for their use as gene regulatory network inference tools.
 </p>
 
 <p>
@@ -149,7 +162,11 @@ techniques. This package has been successfully assessed under the DREAM5 challen
   approach exhibits good quality results when compared to well-established paradigms.
 </p>
 
-<p>The software can be installed via pip, and it is also available on  <a href="https://gitlab.com/bf2i/grenadine" target="_blank">gitlab</a>.</p>
+
+
+<p>GReNaDIne can be installed via <a href="https://pypi.org/project/GReNaDIne/" target="_blank">pip install GReNaDIne</a>, and it is also available on  <a href="https://gitlab.com/bf2i/grenadine" target="_blank">gitlab</a>.</p>
+
+<p>GXN can be installed via <a href="https://pypi.org/project/GXN/" target="_blank">pip install GXN</a>, and it is also available on  <a href="https://gitlab.com/bf2i/gxn" target="_blank">gitlab</a>.</p>
 
 </body>
 </html>
