@@ -1,160 +1,467 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="author" content="Sergio Peignier">
-  <title>Bio-Inspired Suubspace Clustering</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="./home/sergiopeignier.jpeg" type="image/png" sizes="32x32">
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-
-  <script>
-  /* When the user clicks on the button,
-  toggle between hiding and showing the dropdown content */
-  function myFunctionDN() {
-    document.getElementById("dropresearch").classList.toggle("show");
-    if (document.getElementById("dropsoftware").classList.contains('show')) {
-      document.getElementById("dropsoftware").classList.remove('show');
-    }
-    if (document.getElementById("dropcv").classList.contains('show')) {
-      document.getElementById("dropcv").classList.remove('show');
-    }
-    if (document.getElementById("dropteaching").classList.contains('show')) {
-      document.getElementById("dropteaching").classList.remove('show');
-    }
-  }
-  function myFunctionDCV() {
-    document.getElementById("dropcv").classList.toggle("show");
-    if (document.getElementById("dropsoftware").classList.contains('show')) {
-      document.getElementById("dropsoftware").classList.remove('show');
-    }
-    if (document.getElementById("dropresearch").classList.contains('show')) {
-      document.getElementById("dropresearch").classList.remove('show');
-    }
-    if (document.getElementById("dropteaching").classList.contains('show')) {
-      document.getElementById("dropteaching").classList.remove('show');
-    }
-  }
-  function myFunctionDT() {
-    document.getElementById("dropteaching").classList.toggle("show");
-    if (document.getElementById("dropsoftware").classList.contains('show')) {
-      document.getElementById("dropsoftware").classList.remove('show');
-    }
-    if (document.getElementById("dropresearch").classList.contains('show')) {
-      document.getElementById("dropresearch").classList.remove('show');
-    }
-    if (document.getElementById("dropcv").classList.contains('show')) {
-      document.getElementById("dropcv").classList.remove('show');
-    }
-  }
-  function myFunctionSoft() {
-    document.getElementById("dropsoftware").classList.toggle("show");
-    if (document.getElementById("dropresearch").classList.contains('show')) {
-      document.getElementById("dropresearch").classList.remove('show');
-    }
-    if (document.getElementById("dropcv").classList.contains('show')) {
-      document.getElementById("dropcv").classList.remove('show');
-    }
-    if (document.getElementById("dropteaching").classList.contains('show')) {
-      document.getElementById("dropteaching").classList.remove('show');
-    }
-  }
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(e) {
-    if (!e.target.matches('.dropbtn')) {
-
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      for (var d = 0; d < dropdowns.length; d++) {
-        var openDropdown = dropdowns[d];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-  </script>
-  <header>
-    <div class="menutop">
-    <ul>
-    <li><a href="./index.html">About</a></li>
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDCV()">CV</a>
-      <div class="dropdown-content" id="dropcv">
-        <a href="./CV/resume_english.pdf" target="_blank">Resume (english)</a>
-        <a href="./CV/CV_english.pdf" target="_blank">CV (english)</a>
-      </div>
-    </li>
-
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Research</a>
-      <div class="dropdown-content" id="dropresearch">
-        <a href="./Grenadine.html">GRN Inference</a>
-        <a href="./bio_inspired_subspace_clustering.html">Bio-Inspired Subspace Clustering</a>
-        <a href="./EvoMove.html">EvoMove: Musical Personal Companion</a>
-        <a href="./EvoWave.html">EvoWave: Wi-Fi context analysis</a>
-        <a href="./socialist_discourse.html">Socialist Discourse Analysis</a>
-        <a href="./chemoinformatics.html">Data Mining For Chemo-Informatics</a>
-      </div>
-    </li>
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
-      <div class="dropdown-content" id="dropteaching">
-        <a href="./linear_algebra.html">Linear Algebra</a>
-        <a href="./stochastic_process.html">Stochastic Process</a>
-        <a href="./theoretical_CS.html">Graph Theory</a>
-        <a href="./python.html">Python</a>
-        <a href="./Databases.html">Data Bases</a>
-        <a href="./software_development.html">Software Development</a>
-        <a href="./software_deployment.html">Software Deployment</a>
-        <a href="./grn_inference.html">GRN Inference</a>
-        <a href="./string_search.html">String Search Algorithms</a>
-        <a href="./writing_scientific_papers.html">Writing Scientific Paper</a>
-      </div>
-    </li>
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionSoft()">Software</a>
-      <div class="dropdown-content" id="dropsoftware">
-        <a href="./software/EVOWAVE_PACKAGE.zip">EvoWave_Chameleoclust package</a>
-        <a href="./software/SubCMedians_JAR_Archive.zip">SubCMedians Knime package</a>
-        <a href="./software/SubCMedians_C++_PYTHON_Archive.zip">SubCMedians Python package</a>
-        <a href="https://gitlab.com/bf2i/grenadine">GReNaDIne Python package</a>
-        <a href="https://gitlab.com/bf2i/gxn">GXN Python package</a>
-      </div>
-    </li>
-    </ul>
-    </div>
-    </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sergio Peignier</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 id="sergio-peignier">Sergio Peignier</h1>
-<h2 id="section"></h2>
-<table>
-<thead>
-<tr class="header">
-<th>
-  <p><b>Hello</b>, I am Sergio Peignier.</p>
-  <p><b>Welcome</b> to my personal web-page!</p>
-  <p> <b>My major interests are:</b> Machine Learning, Data Mining, Bio-Inspired Algorithms, Artificial Life, Bio-Informatics, Biology, Evolution and Discourse Analysis.</p></th>
-<th><img src="./home/sergiopeignier.jpeg" title="foto" alt="alt text" /></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<p> I am currently an Associate Professor at <a href="https://www.insa-lyon.fr/en/" target="_blank">INSA Lyon</a> (<a href="http://biosciences.insa-lyon.fr/" target="_blank">Biosciences department</a>). I carry out my research at <a href="http://bf2i.insa-lyon.fr/en/" target="_blank">BF2I lab</a> (Biologie Fonctionnelle Insectes et Interactions - UMR0203).</p>
 
-<p> I also worked as a Post-Doctoral Researcher in Machine Learning at <a href="http://cmla.ens-paris-saclay.fr/" target="_blank">CMLA ENS Paris-Saclay</a>. I had the pleasure to work with <a href="https://sites.google.com/site/mougeotmathilde/" target="_blank">Mathilde Mougeot</a>, <a href="http://nvayatis.perso.math.cnrs.fr/" target="_blank">Nicolas Vayatis</a> and <a href="http://kalogeratos.com/psite/" target="_blank">Argyris Kalogeratos</a>. My research project mainly focused on the development of new Transfer Learning techniques for decision trees and random forests. In this context I also contributed to the <a href="https://dataanalyticspost.com/lexique/">Data Analytics Post definitions</a>.</p>
+<header>
+  <h1>Sergio Peignier</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#research">Research</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#courses">Courses</a>
+    <a href="#webinars">Webinars</a>
+    <a href="#publications">Publications</a>
+    <a href="#software">Software</a>
+    <a href="#books">Books</a>
+    <a href="#consulting">Consulting</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<p>My Ph.D. took place at <a href="https://team.inria.fr/beagle" target="_blank">BEAGLE Team-project</a>, <a href="https://www.inria.fr" target="_blank">INRIA</a>, within the european project <a href="http://evoevo.eu/" target="_blank">Evo-Evo</a> and under the supervision of <a href="https://liris.cnrs.fr/membres?idn=crigotti" target="_blank">Christophe Rigotti</a> and <a href="https://liris.cnrs.fr/membres?idn=gbeslon" target="_blank">Guillaume Beslon</a>. The aim of my project was to take advantage of the biological phenomenon known as evolution of evolution to conceive data mining tasks to analyse static datasets and dynamic data streams.</p>
-<h2 id="contact">Contact</h2>
-<ul>
-<li><p><strong>Email</strong> Sergio.Peignier.Zapata AT gmail DOT com</p></li>
-<li><p><strong>Linked-in</strong> <a href="https://www.linkedin.com/in/sergiopeignier" target="_blank">profile</a></p></li>
-</ul>
+<section id="home" class="hero">
+  <div class="hero-content">
+    
+    <div class="hero-text">
+      <h1>Sergio Peignier</h1>
+      
+      <h2>Bridging AI, computational science, and real-world biological systems</h2>
+
+      <p class="hero-lead">
+        Associate Professor and researcher in machine learning and bioinformatics, 
+        working at the intersection of data science, systems biology, and explainable AI.
+      </p>
+
+      <p>
+        I develop computational models and methodologies to understand complex biological systems 
+        and translate them into actionable insights for research, innovation, and applied contexts.
+      </p>
+
+      <p class="hero-proof">
+        Award-winning researcher, recipient of academic excellence distinctions from INSA Lyon 
+        and Best Paper awards at leading international conferences.
+      </p>
+
+      <p class="hero-meta">
+        INSA Lyon · AI · Bioinformatics · Complex Systems
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#consulting" class="btn-primary">Work With Me</a>
+        <a href="#courses" class="btn-secondary">Explore Courses</a>
+      </div>
+
+      
+    </div>
+
+    <div class="hero-image">
+      <img src="images/profile.png" alt="Sergio Peignier">
+    </div>
+
+  </div>
+</section>
+
+<section id="research" class="section">
+  <h3>Selected Work & Research Highlights</h3>
+
+  <div class="cards">
+
+    <div class="card">
+      <h4>Gene Regulatory Network Modeling</h4>
+      <p>
+        Development of computational models to analyze and predict gene interactions 
+        in complex biological systems.
+      </p>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/36833196/">View publication</a>
+    </div>
+
+    <div class="card">
+      <h4>Explainable AI for Life Sciences</h4>
+      <p>
+        Designing explainable AI methods for interpreting ensemble models using structured feature importance analysis.
+      </p>
+      <a href="https://link.springer.com/article/10.1007/s10994-025-06932-9">Read more</a>
+    </div>
+
+    <div class="card">
+      <h4>High-Dimensional Agricultural Hyperspectral Data Analysis</h4>
+      <p>
+        Machine learning approach to enable early detection of plant diseases from hyperspectral imagery
+      </p>
+      <a href="https://www.mdpi.com/1422-0067/23/17/10012">Explore project</a>
+    </div>
+
+  </div>
+
+  <div class="cv-cta">
+    <p>
+      Recipient of academic excellence awards from INSA Lyon (2023, 2025) and Best Paper distinctions at leading international conferences (GECCO 2015, SAC 2017).
+    </p>
+    <p><strong>Full academic profile available in CV format</strong></p>
+    <a href="cv.pdf" target="_blank">Download CV</a>
+  </div>
+</section>
+
+
+
+
+<section id="expertise" class="section expertise">
+  <h3>Areas of Expertise</h3>
+
+  <div class="cards">
+    <div class="card">
+      <h4>Bioinformatics & Systems Biology</h4>
+      <p>Modeling complex biological systems and gene regulatory networks.</p>
+    </div>
+
+    <div class="card">
+      <h4>Machine Learning</h4>
+      <p>Applied machine learning and explainable AI for scientific data analysis.</p>
+    </div>
+
+    <div class="card">
+      <h4>Data Science</h4>
+      <p>Data-driven approaches for extracting insights from high-dimensional datasets.</p>
+    </div>
+
+    <!--<div class="card">
+      <h4>Computational Modeling</h4>
+      <p>Mathematical and algorithmic modeling of complex systems.</p>
+    </div>-->
+  </div>
+</section>
+
+<section id="courses" class="section">
+  <h2>Academic & Applied Courses</h2>
+  <p>Structured learning materials in mathematics, computer science, and data-driven modeling.</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h4>Statistical Learning & Signal Analysis</h4>
+      <p>Foundations of statistical learning, signal analysis, and optimization methods for modeling and extracting information from complex datasets.</p>
+      <a href="machine_learning.html">Access materials</a>
+    </div>
+
+    <div class="card">
+      <h4>Linear Algebra</h4>
+      <p>Vectors, matrices, eigenvalues, and applications in data science and AI.</p>
+      <a href="linear_algebra.html">Access materials</a>
+    </div>
+
+    <div class="card">
+      <h4>Bioinformatics</h4>
+      <p>Computational methods for analyzing biological data, including genomes and gene networks.</p>
+      <a href="bio-informatics.html">Access materials</a>
+    </div>
+
+    <div class="card">
+      <h4>Databases</h4>
+      <p>Relational models, SQL, and data management systems.</p>
+      <a href="data_bases.html">Access materials</a>
+    </div>
+
+    <div class="card">
+      <h4>Software Development & Deployment</h4>
+      <p>Software engineering principles, version control, and deployment pipelines.</p>
+      <a href="software-dev-deploy.html">Access materials</a>
+    </div>
+
+    <div class="card">
+      <h4>Graph Theory</h4>
+      <p>Networks, graphs, algorithms, and applications in complex systems.</p>
+      <a href="graph_theory.html">Access materials</a>
+    </div>
+
+    <div class="card">
+      <h4>Stochastic Processes</h4>
+      <p>Poisson process, Moran process, Branching, Markov Chains.</p>
+      <a href="stochastic_processes.html">Access materials</a>
+    </div>
+
+    <div class="card">
+      <h4>Computational Methods in Python</h4>
+      <p>Applied Python for data analysis, machine learning, and computational modeling in complex systems and biological networks.</p>
+      <a href="python.html">Explore course</a>
+    </div>
+
+    <div class="card">
+      <h4>Research & Academic Skills</h4>
+      <p>Essential skills for scientific research, including critical thinking, academic writing, and effective communication of technical and scientific work.</p>
+      <a href="soft_skills.html">Explore course</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="webinars" class="section">
+  <h3>Webinars</h3>
+  <p>Upcoming events and access to recorded sessions covering key topics and applied insights.</p>
+</section>
+
+
+
+
+
+<section id="publications" class="section">
+
+  <h3>Selected Publications</h3>
+
+  <p>
+    My research focuses on the intersection of machine learning, explainable AI, and computational biology,
+    with applications ranging from gene regulatory network inference to complex biological system modeling.
+  </p>
+
+  <p>
+    I develop data-driven and interpretable machine learning methods to extract meaningful structure from
+    high-dimensional biological and ecological systems, combining statistical learning, network science,
+    and evolutionary computation.
+  </p>
+
+  <p>
+    More recently, my work has expanded into explainable AI for complex models and cross-domain applications
+    of machine learning in biological and environmental systems.
+  </p>
+
+
+  <p>
+    30+ peer-reviewed publications · 350+ citations · International collaborations · AI applied to biological systems
+  </p>
+
+
+  <div class="cards">
+
+    <div class="card highlight">
+      <h4>Bacterial tubular networks channel carbohydrates in insect endosymbiosis</h4>
+      <p><strong>Cell</strong> · 2025</p>
+      <p>High-impact study on metabolic exchange mechanisms in insect–bacteria symbiosis.</p>
+      <a href="https://www.cell.com/cell/fulltext/S0092-8674(25)01130-4">View paper</a>
+    </div>
+
+    <div class="card highlight">
+      <h4>Explaining Random Forest and XGBoost with Shallow Decision Trees via Feature Co-Clustering</h4>
+      <p><strong>Machine Learning</strong>  · 2025</p>
+      <p>Explainable AI methods for interpreting ensemble models using structured feature importance analysis.</p>
+      <a href="https://link.springer.com/article/10.1007/s10994-025-06932-9">View paper</a>
+    </div>
+
+    <div class="card">
+      <h4>Bioactivity analysis of essential oils against agricultural pests</h4>
+      <p><strong>Industrial Crops and Products</strong> · 2023</p>
+      <p>Data-driven analysis of biological activity in complex natural systems for identifying effective plant-based pest control agents.</p>
+      <a href="https://www.sciencedirect.com/science/article/pii/S0926669023003746">View paper</a>
+    </div>
+
+
+    <div class="card highlight">
+      <h4>GReNaDIne: Data-driven Python library for gene regulatory network inference</h4>
+      <p><strong>Genes</strong> · 2023</p>
+      <p>Computational framework for inferring gene regulatory networks using data-driven machine learning</p>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/36833196/">View paper</a>
+    </div>
+
+    <div class="card">
+      <h4>Gene regulatory network inference using ensemble learning</h4>
+      <p><strong>International Journal on Artificial Intelligence Tools</strong> · 2023</p>
+      <p> Application of ensemble machine learning techniques to reconstruct gene regulatory networks from high-dimensional biological data</p>
+      <a href="https://ieeexplore.ieee.org/document/9643188">View paper</a>
+    </div>
+
+    <div class="card">
+      <h4>Spatial–spectral analysis of hyperspectral images for early plant disease detection</h4>
+      <p><strong>International Journal of Molecular Sciences</strong> · 2022</p>
+      <p>SVM approach to enable early detection of plant diseases from hyperspectral imagery.</p>
+      <a href="https://www.mdpi.com/1422-0067/23/17/10012">View paper</a>
+    </div>
+
+    <div class="card">
+      <h4>Gene regulatory network inference using classification algorithms</h4>
+      <p><strong>International Journal on Artificial Intelligence Tools</strong> · 2021</p>
+      <p>Machine learning-based framework using classification models to infer gene interactions in complex biological systems.</p>
+      <a href="https://ieeexplore.ieee.org/document/8995194">View paper</a>
+    </div>
+
+    <div class="highlight card">
+      <h4>Evolutionary novelty in apoptotic pathways of aphids</h4>
+      <p><strong>PNAS </strong> · 2020</p>
+      <p>Evolutionary analysis of apoptotic gene families revealing diversification patterns and functional innovation in insect genomes.</p>
+      <a href="https://www.pnas.org/doi/10.1073/pnas.2013847117">View paper</a>
+    </div>
+
+    <div class="highlight card">
+      <h4>Subspace clustering using evolvable genome structure</h4>
+      <p><strong>Genetic and Evolutionary Computation Conference</strong> · 2015</p>
+      <p>Evolutionary computation approach for subspace clustering based on genome-inspired representations of solution spaces.</p>
+      <a href="https://dl.acm.org/doi/abs/10.1145/2739480.2754709">View paper</a>
+    </div>
+
+  </div>
+
+  <a href="https://scholar.google.com/citations?user=nQMCbSIAAAAJ&hl=fr&oi=ao" target="_blank"> View full profile on Google Scholar </a>
+
+</section>
+
+
+
+<section id="software" class="section">
+  <h2>Computational Tools & Open Research Software</h2>
+  <p>
+    A collection of research software and computational tools for machine learning,
+    bioinformatics, and complex systems modeling. These projects bridge theoretical
+    developments with practical implementations used in scientific and applied contexts.
+  </p>
+
+  <div class="cards">
+
+    <!-- CHAMELEOCLUST -->
+    <div class="card">
+      <h4>Chameleoclust (EvoWave Package)</h4>
+      <p>
+        Bio-inspired clustering algorithm based on evolvable genome structures, featuring
+        variable-length representations, functional and non-functional elements, and
+        mutation operators including chromosomal rearrangements.
+      </p>
+      <a href="software/EVOWAVE_PACKAGE.zip">Download package</a><br>
+      <a href="https://github.com/SergioPeignier/EvoWave_Chameleoclust" target="_blank">View repository</a>
+    </div>
+
+    <!-- SUBCMEDIANS -->
+    <div class="card">
+      <h4>SubCMedians</h4>
+      <p>
+        Subspace clustering algorithm extending the K-medians paradigm, based on stochastic
+        local exploration and efficient optimization in high-dimensional data spaces.
+      </p>
+      <a href="software/SubCMedians_JAR_Archive.zip">Download (JAR)</a><br>
+      <a href="software/SubCMedians_C++_PYTHON_Archive.zip">Download (C++ / Python)</a><br>
+      <a href="https://github.com/SergioPeignier/SubCMedians" target="_blank">View repository</a>
+    </div>
+
+    <!-- GXN -->
+    <div class="card">
+      <h4>GXN (Gene Self-Expressive Networks)</h4>
+      <p>
+        Framework for learning generalizable gene regulatory representations using
+        self-expressive network models for biological data analysis.
+      </p>
+      <a href="https://gitlab.com/bf2i/gxn" target="_blank">View repository</a>
+    </div>
+
+    <!-- GRENADINE -->
+    <div class="card">
+      <h4>GReNaDIne</h4>
+      <p>
+        Data-driven framework for gene regulatory network inference from gene expression data,
+        integrating machine learning and statistical modeling approaches.
+      </p>
+      <a href="https://gitlab.com/bf2i/grenadine" target="_blank">View repository</a>
+    </div>
+
+    <!-- GSHAPA -->
+    <div class="card">
+      <h4>GSHAPA</h4>
+      <p>
+        Gene set analysis tool for single-cell RNA-seq data using Random Forest models
+        and SHAP-based explainability techniques.
+      </p>
+      <a href="https://gitlab.com/bf2i/gshapa" target="_blank">View repository</a>
+    </div>
+
+    <!-- ALZHEIMER -->
+    <div class="card">
+      <h4>Alzheimer's Disease GRN Analysis</h4>
+      <p>
+        Computational framework for studying gene regulatory programs associated with
+        Alzheimer's disease using data-driven and explainable AI approaches.
+      </p>
+      <a href="https://gitlab.com/bf2i/ad-coral" target="_blank">View repository</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section id="books" class="section">
+  <h3>Books</h3>
+
+  <p>
+    Practical books on data science, machine learning, and computational methods designed for students, researchers, and professionals.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h4>The Practitioner's Guide to Hyperspectral AI in Agriculture</h4>
+      <p>
+        A practical and applied guide to machine learning and hyperspectral imaging,
+        focused on real-world agricultural systems, from data acquisition to predictive modeling.
+      </p>
+      <p><em>Book in preparation (forthcoming on Amazon)</em></p>
+      <a href="#" style="pointer-events: none; opacity: 0.5;">
+        Coming soon (Pre-release access available upon request)</a>
+      <!-- <a href="https://amazon.com/your-book-link" target="_blank"> View on Amazon </a> -->
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="consulting" class="section">
+  <h3>Consulting</h3>
+
+  <p>
+    I collaborate with research groups, companies, and institutions to apply 
+    machine learning and computational modeling to complex biological and data-driven problems.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h4>AI for Biological Systems</h4>
+      <p>Design and implementation of interpretable models for biological data.</p>
+    </div>
+
+    <div class="card">
+      <h4>Data Analysis & Modeling</h4>
+      <p>Advanced analysis of complex datasets and system modeling.</p>
+    </div>
+
+    <div class="card">
+      <h4>Training & Workshops</h4>
+      <p>Custom sessions for teams and organizations.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contact" class="cta">
+  <h3>Let’s work together</h3>
+  <form class="contact-form" action="https://formspree.io/f/mnjlyqdy" method="POST">
+    
+    <input type="text" name="name" placeholder="Your name" required>
+    
+    <input type="email" name="email" placeholder="Your email" required>
+    
+    <textarea name="message" placeholder="Tell me briefly about your project or inquiry..." required></textarea>   
+
+    <button type="submit">Send message</button>
+  
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Sergio Peignier | All rights reserved</p>
+</footer>
+
 </body>
 </html>

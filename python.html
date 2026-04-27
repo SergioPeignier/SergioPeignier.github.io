@@ -1,169 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="author" content="Sergio Peignier">
-  <title>Bio-Inspired Suubspace Clustering</title>
-  <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="./home/sergiopeignier.jpeg" type="image/png" sizes="32x32">
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-
-  <script>
-  /* When the user clicks on the button,
-  toggle between hiding and showing the dropdown content */
-  function myFunctionDN() {
-    document.getElementById("dropresearch").classList.toggle("show");
-    if (document.getElementById("dropsoftware").classList.contains('show')) {
-      document.getElementById("dropsoftware").classList.remove('show');
-    }
-    if (document.getElementById("dropcv").classList.contains('show')) {
-      document.getElementById("dropcv").classList.remove('show');
-    }
-    if (document.getElementById("dropteaching").classList.contains('show')) {
-      document.getElementById("dropteaching").classList.remove('show');
-    }
-  }
-  function myFunctionDCV() {
-    document.getElementById("dropcv").classList.toggle("show");
-    if (document.getElementById("dropsoftware").classList.contains('show')) {
-      document.getElementById("dropsoftware").classList.remove('show');
-    }
-    if (document.getElementById("dropresearch").classList.contains('show')) {
-      document.getElementById("dropresearch").classList.remove('show');
-    }
-    if (document.getElementById("dropteaching").classList.contains('show')) {
-      document.getElementById("dropteaching").classList.remove('show');
-    }
-  }
-  function myFunctionDT() {
-    document.getElementById("dropteaching").classList.toggle("show");
-    if (document.getElementById("dropsoftware").classList.contains('show')) {
-      document.getElementById("dropsoftware").classList.remove('show');
-    }
-    if (document.getElementById("dropresearch").classList.contains('show')) {
-      document.getElementById("dropresearch").classList.remove('show');
-    }
-    if (document.getElementById("dropcv").classList.contains('show')) {
-      document.getElementById("dropcv").classList.remove('show');
-    }
-  }
-  function myFunctionSoft() {
-    document.getElementById("dropsoftware").classList.toggle("show");
-    if (document.getElementById("dropresearch").classList.contains('show')) {
-      document.getElementById("dropresearch").classList.remove('show');
-    }
-    if (document.getElementById("dropcv").classList.contains('show')) {
-      document.getElementById("dropcv").classList.remove('show');
-    }
-    if (document.getElementById("dropteaching").classList.contains('show')) {
-      document.getElementById("dropteaching").classList.remove('show');
-    }
-  }
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(e) {
-    if (!e.target.matches('.dropbtn')) {
-
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      for (var d = 0; d < dropdowns.length; d++) {
-        var openDropdown = dropdowns[d];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-  </script>
-  <header>
-    <div class="menutop">
-    <ul>
-    <li><a href="./index.html">About</a></li>
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDCV()">CV</a>
-      <div class="dropdown-content" id="dropcv">
-        <a href="./CV/resume_english.pdf" target="_blank">Resume (english)</a>
-        <a href="./CV/CV_english.pdf" target="_blank">CV (english)</a>
-      </div>
-    </li>
-
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDN()">Research</a>
-      <div class="dropdown-content" id="dropresearch">
-        <a href="./Grenadine.html">GRN Inference</a>
-        <a href="./bio_inspired_subspace_clustering.html">Bio-Inspired Subspace Clustering</a>
-        <a href="./EvoMove.html">EvoMove: Musical Personal Companion</a>
-        <a href="./EvoWave.html">EvoWave: Wi-Fi context analysis</a>
-        <a href="./socialist_discourse.html">Socialist Discourse Analysis</a>
-        <a href="./chemoinformatics.html">Data Mining For Chemo-Informatics</a>
-      </div>
-    </li>
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionDT()">Teaching</a>
-      <div class="dropdown-content" id="dropteaching">
-        <a href="./linear_algebra.html">Linear Algebra</a>
-        <a href="./stochastic_process.html">Stochastic Process</a>
-        <a href="./theoretical_CS.html">Graph Theory</a>
-        <a href="./python.html">Python</a>
-        <a href="./Databases.html">Data Bases</a>
-        <a href="./software_development.html">Software Development</a>
-        <a href="./software_deployment.html">Software Deployment</a>
-        <a href="./grn_inference.html">GRN Inference</a>
-        <a href="./string_search.html">String Search Algorithms</a>
-        <a href="./writing_scientific_papers.html">Writing Scientific Paper</a>
-      </div>
-    </li>
-    <li class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="myFunctionSoft()">Software</a>
-      <div class="dropdown-content" id="dropsoftware">
-        <a href="./software/EVOWAVE_PACKAGE.zip">EvoWave_Chameleoclust package</a>
-        <a href="./software/SubCMedians_JAR_Archive.zip">SubCMedians Knime package</a>
-        <a href="./software/SubCMedians_C++_PYTHON_Archive.zip">SubCMedians Python package</a>
-        <a href="https://gitlab.com/bf2i/grenadine">GReNaDIne Python package</a>
-        <a href="https://gitlab.com/bf2i/gxn">GXN Python package</a>
-      </div>
-    </li>
-    </ul>
-    </div>
-    </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses | Sergio Peignier</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 id="python">Python</h1>
-<p>Please find bellow some links to practical courses of python programing. Each practical course aims to let the students practice and develop their programming skills while presenting them nice algorithms. Please send me an e-mail if you want more practical courses (in french).</p>
-<ul>
-<li><p><a href="./teaching/python/alignement.pdf" target="_blank">Sequence Alignement</a></p></li>
-<li><p><a href="./teaching/python/practical-simple-piecewise.pdf" target="_blank">Simple Piecewise Linear Segmentation</a></p></li>
-<li><p><a href="./teaching/python/kmeans.pdf" target="_blank">K-means</a></p></li>
-<li><p><a href="./teaching/python/renforcement.pdf" target="_blank">Reinforcement Learning</a></p></li>
-<li><p><a href="./teaching/python/hopfield.pdf" target="_blank">Hopfield Neural Networks</a></p></li>
-<li><p><a href="./teaching/python/neuro1.pdf" target="_blank">Simple Artificial Neural Network</a></p></li>
-<li><p><a href="./teaching/python/leaky-echo-state.pdf" target="_blank">Leaky Echo State Network</a></p></li>
-<li><p><a href="./teaching/python/TPpandas.pdf" target="_blank">Pandas library</a></p></li>
-<li><p><a href="./teaching/python/c-elegans-connectome.pdf" target="_blank">C. Elegans Connectome I</a></p></li>
-<li><p><a href="./teaching/python/Studying_the_connectome_of__em_Caenorhabditis_elegans.pdf" target="_blank">C. Elegans Connectome II</a></p></li>
-<li><p><a href="./teaching/python/Studying_the_connectome_of__em_Caenorhabditis_elegans.pdf" target="_blank">C. Elegans Connectome II</a></p></li>
-<li><p>Deep Cross Entropy Reinforcement Learning Method <a href="https://colab.research.google.com/drive/1QEMdReqw6-eFQQj2829Jz2tUAl8K18Am?usp=sharing" target="_blank">(exercise)</a><a href="https://colab.research.google.com/drive/1xN7nqg6b-uADoV1iT4L2xX5LFnvEKjkv?usp=sharing" target="_blank">(solution)</a>
-<li><p>Deep Auto-Encoders using Keras <a href="https://colab.research.google.com/drive/1dqKHuNl11EetW4yECigtZ5YDQre1_dAk?usp=sharing" target="_blank">(exercise)</a>
-<li><p><a href="./teaching/python/DS0.pdf" target="_blank">Exam 2015 Bioinformatics Department INSA</a></p></li>
-<li><p><a href="./teaching/python/DS1.pdf" target="_blank">Exam 2016 Bioinformatics Department INSA</a></p></li>
-<li><p><a href="./teaching/python/DS2.pdf" target="_blank">Exam 2017 Bioinformatics Department INSA</a></p></li>
+
+<header>
+  <h1>Sergio Peignier</h1>
+  <nav>
+    <a href="index.html#home">Home</a>
+    <a href="index.html#research">Research</a>
+    <a href="index.html#expertise">Expertise</a>
+    <a href="index.html#courses">Courses</a>
+    <a href="index.html#webinars">Webinars</a>
+    <a href="index.html#publications">Publications</a>
+    <a href="index.html#software">Software</a>
+    <a href="index.html#books">Books</a>
+    <a href="index.html#consulting">Consulting</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2>Computational Methods in Python</h2>
+  <p>
+    Practical applications of Python for data analysis, machine learning, and computational modeling,
+    including real-world problems in biology, networks, and complex systems.
+  </p>
+  <p><strong>Tools:</strong> Python · NumPy · Pandas · Machine Learning Libraries</p>
+  <p><strong>Applications:</strong> AI · Bioinformatics · Network Analysis · Data Science</p>
+  <p><strong>Focus:</strong> Data Analysis · Machine Learning · Scientific Computing · Complex Systems</p>
+  <p><strong>Level:</strong> Undergraduate / Graduate</p>
+
+  <div class="cards">
+
+    <!-- DATA ANALYSIS -->
+    <div class="card">
+      <h4>Data Analysis with Pandas</h4>
+      <p>Introduction to data manipulation, cleaning, and analysis using Python.</p>
+      <a href="courses/python/TPpandas.pdf">Access materials</a>
+    </div>
+
+    <!-- FUNDAMENTALS -->
+    <div class="card">
+      <h4>Piecewise Modeling</h4>
+      <p>Simple segmentation and modeling techniques for structured data.</p>
+      <a href="courses/python/practical-simple-piecewise.pdf">Access materials</a>
+    </div>
+
+    <div class="card">
+      <h4>Sequence Alignment</h4>
+      <p>Algorithms for comparing biological sequences and detecting similarities.</p>
+      <a href="courses/python/alignement.pdf">Access materials</a>
+    </div>
+
+    <!-- MACHINE LEARNING -->
+    <div class="card">
+      <h4>K-Means Clustering</h4>
+      <p>Unsupervised learning method for grouping data into clusters.</p>
+      <a href="courses/python/kmeans.pdf">Access materials</a>
+    </div>
+
+    <div class="card">
+      <h4>Reinforcement Learning Basics</h4>
+      <p>Introduction to learning through interaction and reward-based systems.</p>
+      <a href="courses/python/renforcement.pdf">Access materials</a>
+    </div>
+
+    <!-- NEURAL MODELS -->
+    <div class="card">
+      <h4>Neural Networks Introduction</h4>
+      <p>Foundations of neural computation and basic architectures.</p>
+      <a href="courses/python/neuro1.pdf">Access materials</a>
+    </div>
+
+    <div class="card">
+      <h4>Hopfield Networks</h4>
+      <p>Recurrent neural networks for associative memory and pattern storage.</p>
+      <a href="courses/python/hopfield.pdf">Access materials</a>
+    </div>
+
+    <div class="card">
+      <h4>Echo State Networks</h4>
+      <p>Reservoir computing approach for modeling temporal data.</p>
+      <a href="courses/python/leaky-echo-state.pdf">Access materials</a>
+    </div>
+
+    <!-- BIO + NETWORKS -->
+    <div class="card">
+      <h4>Connectome Analysis (C. elegans)</h4>
+      <p>Graph-based analysis of neural connectivity using Python.</p>
+      <a href="courses/python/Studying_the_connectome_of__em_Caenorhabditis_elegans.pdf">Access materials</a>
+      <a href="courses/python/CElegans.zip">Download dataset</a>
+    </div>
 
 
-</ul>
+    <div class="card">
+      <h4>Connectome ODE Modeling</h4>
+      <p>Dynamic modeling of neural connectomes using ordinary differential equations to analyze activity propagation and network behavior.</p>
+      <a href="courses/python/c-elegans-connectome_simualtion_with_ODEs.pdf">Access materials</a>
+      <a href="courses/python/CElegans.zip">Download dataset</a>
+    </div>
+
+    <!-- EXAMS -->
+    <div class="card">
+      <h4>Exam Collection</h4>
+      <p>Practice exams and evaluation materials.</p>
+      <a href="courses/python/exam1.pdf">Exam 1</a><br>
+      <a href="courses/python/exam2.pdf">Exam 2</a><br>
+      <a href="courses/python/exam3.pdf">Exam 3</a>
+    </div>
+
+  </div>
+</section>
 
 
-<center>
-<ul>
+<footer>
+  <p>© 2026 Sergio Peignier | All rights reserved</p>
+</footer>
 
-  <p> Raspberry Pi robot based on the "C. Elegans Connectome" practical course [robot designed and created with Carlos Vivar Ríos]</p>
-
-  <iframe width="420" height="315"
-    src="https://www.youtube.com/embed/2Wv_F2L6bis">
-  </iframe>
-</ul>
-</center>
 </body>
 </html>
