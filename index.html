@@ -18,7 +18,7 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123XYZ9"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M1ZY9HQ9ZV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -507,11 +507,11 @@
     <input type="text" placeholder="Your name" required>
     <input type="email" placeholder="Your email" required>
 
-    <select>
-      <option>Consulting inquiry</option>
-      <option>Research collaboration</option>
-      <option>Course / training</option>
-      <option>Book / Webinars</option>
+    <select name="inquiry_type">
+      <option value="consulting">Consulting inquiry</option>
+      <option value="research">Research collaboration</option>
+      <option value="training">Course / training</option>
+      <option value="content">Book / Webinars</option>
     </select>
     
     <textarea name="message" placeholder="Tell me briefly about your project or inquiry..." required></textarea>   
@@ -557,25 +557,50 @@
   </div>
 
 </footer>
-
 <script>
+  // INTENCIÓN DE CONSULTING
   document.querySelectorAll('.btn-primary').forEach(btn => {
     btn.addEventListener('click', () => {
-      gtag('event', 'click_consulting_cta', {
-        event_category: 'engagement',
-        event_label: 'hero_button'
+      gtag('event', 'lead_intent_consulting', {
+        event_category: 'lead',
+        event_label: 'hero_cta'
       });
     });
   });
 
-  document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', () => {
-      gtag('event', 'form_submission', {
-        event_category: 'conversion',
-        event_label: 'contact_form'
+  // INTENCIÓN DE TRAINING
+  document.querySelectorAll('.cta a[href="#contact"]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      gtag('event', 'lead_intent_training', {
+        event_category: 'lead',
+        event_label: 'training_cta'
       });
     });
   });
+
+  // LEAD REAL + CLASIFICACIÓN
+  const form = document.querySelector('.contact-form');
+
+  if (form) {
+    form.addEventListener('submit', () => {
+
+      const type = form.querySelector('select[name="inquiry_type"]').value;
+
+      gtag('event', 'lead_form_submitted', {
+        event_category: 'conversion',
+        event_label: type
+      });
+
+      // LEAD DE ALTO VALOR (consulting)
+      if (type === 'consulting') {
+        gtag('event', 'high_value_lead', {
+          event_category: 'conversion',
+          event_label: 'consulting'
+        });
+      }
+
+    });
+  }
 </script>
 </body>
 </html>
