@@ -4,6 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sergio Peignier</title>
+  <meta name="description" content="AI consulting, machine learning, and bioinformatics. Sergio Peignier helps research teams and companies apply explainable AI to complex biological and data-driven systems.">
+  <meta name="keywords" content="AI consulting, machine learning, bioinformatics, explainable AI, data science, gene regulatory networks, computational biology">
+
+  <meta name="author" content="Sergio Peignier">
+
+  <!-- Open Graph (LinkedIn / social sharing) -->
+  <meta property="og:title" content="Sergio Peignier | AI & Bioinformatics Consulting">
+  <meta property="og:description" content="Applying AI to complex biological systems. Consulting, research, and training.">
+  <meta property="og:image" content="https://yourdomain.com/images/profile.png">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123XYZ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-M1ZY9HQ9ZV');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sergio Peignier",
+    "jobTitle": "Associate Professor",
+    "affiliation": "INSA Lyon",
+    "url": "https://yourdomain.com",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=nQMCbSIAAAAJ"
+    ],
+    "knowsAbout": [
+      "Machine Learning",
+      "Bioinformatics",
+      "Explainable AI",
+      "Data Science"
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -428,7 +469,7 @@
     </div>
 
   </div>
-
+</section>
 
 <section id="consulting" class="section">
   <h2>Collaborations & Consulting</h2>
@@ -517,5 +558,24 @@
 
 </footer>
 
+<script>
+  document.querySelectorAll('.btn-primary').forEach(btn => {
+    btn.addEventListener('click', () => {
+      gtag('event', 'click_consulting_cta', {
+        event_category: 'engagement',
+        event_label: 'hero_button'
+      });
+    });
+  });
+
+  document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', () => {
+      gtag('event', 'form_submission', {
+        event_category: 'conversion',
+        event_label: 'contact_form'
+      });
+    });
+  });
+</script>
 </body>
 </html>
